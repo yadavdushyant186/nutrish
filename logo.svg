@@ -1,70 +1,72 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none" class="w-auto h-12">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" fill="none" class="w-auto h-12">
   <defs>
-    <!-- Rich Gold Gradients -->
-    <linearGradient id="nutrishGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FDF3E3" />
-      <stop offset="30%" stop-color="#F2C879" />
-      <stop offset="70%" stop-color="#D49B55" />
-      <stop offset="100%" stop-color="#A56E2B" />
-    </linearGradient>
-    
-    <linearGradient id="forestShield" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1E3E30" />
-      <stop offset="50%" stop-color="#142B21" />
-      <stop offset="100%" stop-color="#0D1D16" />
-    </linearGradient>
-    
-    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#84B692" />
-      <stop offset="100%" stop-color="#3D7E67" />
+    <!-- Soft Warm Almond Gold Gradient -->
+    <linearGradient id="nutrishAlmondGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9DFC0" />
+      <stop offset="35%" stop-color="#E8B568" />
+      <stop offset="80%" stop-color="#C78A35" />
+      <stop offset="100%" stop-color="#A56A1E" />
     </linearGradient>
 
-    <!-- Drop Shadow Filter for Luxury Depth -->
-    <filter id="badgeShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0D1D16" flood-opacity="0.25" />
+    <!-- Deep Organic Forest Green -->
+    <linearGradient id="nutrishForest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D5C49" />
+      <stop offset="100%" stop-color="#14261D" />
+    </linearGradient>
+
+    <!-- Fresh Sprout Sage Leaf -->
+    <linearGradient id="nutrishSage" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9BC4A5" />
+      <stop offset="100%" stop-color="#4F7B5E" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter for Soft Depth -->
+    <filter id="softEmblemShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2.5" stdDeviation="3" flood-color="#14261D" flood-opacity="0.08" />
     </filter>
   </defs>
 
-  <!-- ================= EMBLEM BADGE (54x54) ================= -->
-  <g transform="translate(3, 3)" filter="url(#badgeShadow)">
-    <!-- Base Badge Cushion (Soft Rounded Hexagon / Squircle) -->
-    <rect x="0" y="0" width="54" height="54" rx="18" fill="url(#forestShield)" stroke="url(#nutrishGold)" stroke-width="1.5" />
+  <!-- ================= THE ALMOND-N ICON (64x64) ================= -->
+  <g transform="translate(3, 3)" filter="url(#softEmblemShadow)">
+    <!-- Soft Organic Oat/Porcelain Badge Base -->
+    <rect x="0" y="0" width="64" height="64" rx="22" fill="#F8F3EA" stroke="#EADBC6" stroke-width="1.2" />
     
-    <!-- Inner Delicate Ring -->
-    <circle cx="27" cy="27" r="22.5" fill="none" stroke="url(#nutrishGold)" stroke-width="0.75" stroke-dasharray="2 1.5" opacity="0.6" />
+    <!-- Subtle Golden Inner Ring -->
+    <circle cx="32" cy="32" r="27.5" fill="none" stroke="url(#nutrishAlmondGold)" stroke-width="0.8" stroke-dasharray="2 1.5" opacity="0.45" />
 
-    <!-- Organic Almond / Seed Pod Silhouette in Gold -->
-    <path d="M 27 10 C 35 15, 41 24, 38 34 C 35 43, 27 46, 23 44 C 18 41, 16 32, 19 22 C 21 16, 25 11, 27 10 Z" 
-          fill="none" stroke="url(#nutrishGold)" stroke-width="1.2" opacity="0.4" />
+    <!-- THE ALMOND + 'N' FUSION -->
+    <!-- Left Almond Contour / Left Stem of 'N' -->
+    <path d="M 21,48 C 15,40 14,24 22,15 C 23.5,13 26,14.5 25.5,17 C 19.5,26 20.5,38 25,46 C 26,48 23,50 21,48 Z" 
+          fill="url(#nutrishAlmondGold)" />
 
-    <!-- Sprouting Botanical Leaves (Top-Left Accent) -->
-    <path d="M 20 18 C 16 15, 14 11, 16 8 C 19 9, 21 13, 20 18 Z" fill="url(#leafGradient)" />
-    <path d="M 22 17 C 22 13, 25 10, 28 9 C 27 13, 24 16, 22 17 Z" fill="url(#nutrishGold)" opacity="0.85" />
+    <!-- Center Diagonal of 'N' / Almond Kernel Cleavage -->
+    <path d="M 23,17 C 30,25 37,37 42,46 C 43.5,48.5 47,48 46,45 C 40,35 32,22 26,15 C 24,13 22,15 23,17 Z" 
+          fill="url(#nutrishForest)" />
 
-    <!-- Stylized Monogram Letter 'N' interwoven with Seed Curve -->
-    <!-- Left Stem -->
-    <path d="M 19 37 L 19 19 C 17.5 19, 16.5 19.5, 16 20 L 16 18 L 22 18 L 22 37 Z" fill="url(#nutrishGold)" />
-    <!-- Diagonal Ribbon -->
-    <path d="M 21.5 20.5 L 32.5 35.5 L 34.5 35.5 L 23.5 18 L 21.5 20.5 Z" fill="#FFFFFF" opacity="0.95" />
-    <!-- Right Stem with Botanical Sprout Tip -->
-    <path d="M 32 37 L 32 20 L 34.5 18.5 C 36 21, 36.5 24, 35 27 L 34.5 37 Z" fill="url(#nutrishGold)" />
-    
-    <!-- Tiny Golden Sun/Seed Bead at Bottom -->
-    <circle cx="27" cy="41" r="1.5" fill="url(#nutrishGold)" />
+    <!-- Right Almond Contour / Right Stem of 'N' -->
+    <path d="M 42,46 C 48,38 49,25 42,17 C 40.5,15 43,13 45,14.5 C 52,24 51,38 44,47.5 C 42.5,49 40.5,47.5 42,46 Z" 
+          fill="url(#nutrishAlmondGold)" />
+
+    <!-- Sprouting Superfood Seed Leaf (Blooming out of top right of N) -->
+    <path d="M 43,16 C 41,9 48,4 54,6 C 53.5,12 48,17 43,16 Z" 
+          fill="url(#nutrishSage)" />
+    <path d="M 44.5,14.5 C 48,10.5 51.5,8.5 53,7" stroke="#FFFFFF" stroke-width="0.8" stroke-linecap="round" opacity="0.9" />
+
+    <!-- Golden Almond Heart / Pure Seed Seedling in center -->
+    <path d="M 33.5,27 C 36,30.5 37,34.5 35,37 C 33,39.5 30.5,39 29,36 C 27.5,33 29.5,29 33.5,27 Z" 
+          fill="url(#nutrishAlmondGold)" opacity="0.95" />
   </g>
 
-  <!-- ================= TYPOGRAPHIC WORDMARK ================= -->
-  <g transform="translate(68, 12)">
-    <!-- Main Brand Name: NUTRISH -->
-    <text x="0" y="27" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="700" letter-spacing="0.5" fill="#14261D">
-      Nutr<tspan fill="url(#nutrishGold)">i</tspan>sh
+  <!-- ================= EDITORIAL WORDMARK ================= -->
+  <g transform="translate(80, 14)">
+    <!-- Brand Name: Nutrish -->
+    <text x="0" y="28" font-family="'Playfair Display', Georgia, serif" font-size="30" font-weight="700" letter-spacing="-0.3" fill="#14261D">
+      Nutr<tspan fill="#C78A35">i</tspan>sh
     </text>
 
-    <!-- Subtitle Badge with Diamonds: ARTISANAL HARVESTS -->
-    <g transform="translate(1, 41)">
-      <text font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="800" letter-spacing="2.8" fill="#BD8037">
-        ARTISANAL NUTS &amp; SEEDS
-      </text>
-    </g>
+    <!-- Subtitle: ARTISANAL NUTS & SEEDS -->
+    <text x="1" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" letter-spacing="2.8" fill="#B87B2E">
+      ARTISANAL NUTS &amp; SEEDS
+    </text>
   </g>
 </svg>

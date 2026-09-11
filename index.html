@@ -141,52 +141,57 @@
 
         <!-- Brand Logo -->
         <a href="#" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-700 rounded-2xl p-1 transition-all" aria-label="Nutrish Artisanal Nuts and Seeds">
-          <!-- Artisanal Crest Icon -->
-          <div class="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-forest-800 via-forest-900 to-forest-950 p-[1.5px] shadow-soft-md group-hover:shadow-glow-gold transition-all duration-300 group-hover:scale-[1.03]">
-            <div class="w-full h-full rounded-[14px] bg-[#14261D] flex items-center justify-center relative overflow-hidden border border-gold-400/30">
-              <!-- Golden Ambient Sheen -->
-              <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-gold-500/10 to-gold-300/25 pointer-events-none"></div>
-              
-              <!-- Bespoke SVG Monogram Emblem -->
-              <svg class="w-8 h-8 text-gold-400 transition-transform duration-300 group-hover:rotate-3" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="emblemGold" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FDF3E3" />
-                    <stop offset="40%" stop-color="#F2C879" />
-                    <stop offset="80%" stop-color="#D49B55" />
-                    <stop offset="100%" stop-color="#BD8037" />
-                  </linearGradient>
-                  <linearGradient id="emblemLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#94B89D" />
-                    <stop offset="100%" stop-color="#3D7E67" />
-                  </linearGradient>
-                </defs>
-                <!-- Delicate Filigree Ring -->
-                <circle cx="22" cy="22" r="19" stroke="url(#emblemGold)" stroke-width="0.75" stroke-dasharray="2 1.5" opacity="0.55" />
-                <!-- Almond / Seed Silhouette Outline -->
-                <path d="M22 6 C28 10 33 18 31 27 C29 35 22 38 18 36 C14 34 12 26 15 18 C17 12 20 7 22 6Z" fill="none" stroke="url(#emblemGold)" stroke-width="1" opacity="0.35" />
-                <!-- Sprouting Superfood Leaves -->
-                <path d="M16 13 C12 11 11 7 13 4 C16 5 17 9 16 13Z" fill="url(#emblemLeaf)" />
-                <path d="M18 12 C18 9 20 6 23 5 C22 8 20 11 18 12Z" fill="url(#emblemGold)" opacity="0.85" />
-                <!-- Stylized 'N' Monogram -->
-                <path d="M15 31 L15 15 L19.5 15 L19.5 31 Z" fill="url(#emblemGold)" />
-                <path d="M19 16.5 L28 29 L30 29 L20.5 15 Z" fill="#FFFFFF" opacity="0.95" />
-                <path d="M28 31 L28 16.5 L30.5 15 C31.8 17.2 32 20 31 23 L30.5 31 Z" fill="url(#emblemGold)" />
-                <circle cx="22.5" cy="34" r="1.2" fill="url(#emblemGold)" />
-              </svg>
-            </div>
+          <!-- Artisanal Almond-N Soft Icon -->
+          <div class="relative w-12 h-12 rounded-2xl bg-[#F8F3EA] border border-[#EADBC6] shadow-soft-sm flex items-center justify-center p-2 group-hover:shadow-md group-hover:border-gold-400/60 transition-all duration-300 group-hover:scale-105">
+            <svg viewBox="0 0 64 64" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="softAlmondGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#F9DFC0" />
+                  <stop offset="35%" stop-color="#E8B568" />
+                  <stop offset="80%" stop-color="#C78A35" />
+                  <stop offset="100%" stop-color="#A56A1E" />
+                </linearGradient>
+                <linearGradient id="softForestGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2D5C49" />
+                  <stop offset="100%" stop-color="#14261D" />
+                </linearGradient>
+                <linearGradient id="softSproutSage" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#9BC4A5" />
+                  <stop offset="100%" stop-color="#4F7B5E" />
+                </linearGradient>
+              </defs>
+
+              <!-- Subtle Golden Ring -->
+              <circle cx="32" cy="32" r="28" stroke="url(#softAlmondGold)" stroke-width="0.75" stroke-dasharray="2 1.5" opacity="0.4" />
+
+              <!-- Left Almond Contour (Forms left upright of 'N') -->
+              <path d="M 21,48 C 15,40 14,24 22,15 C 23.5,13 26,14.5 25.5,17 C 19.5,26 20.5,38 25,46 C 26,48 23,50 21,48 Z" fill="url(#softAlmondGold)" />
+
+              <!-- Center Diagonal of 'N' (Natural Almond kernel split) -->
+              <path d="M 23,17 C 30,25 37,37 42,46 C 43.5,48.5 47,48 46,45 C 40,35 32,22 26,15 C 24,13 22,15 23,17 Z" fill="url(#softForestGreen)" />
+
+              <!-- Right Almond Contour (Forms right upright of 'N') -->
+              <path d="M 42,46 C 48,38 49,25 42,17 C 40.5,15 43,13 45,14.5 C 52,24 51,38 44,47.5 C 42.5,49 40.5,47.5 42,46 Z" fill="url(#softAlmondGold)" />
+
+              <!-- Sprouting Superseed Leaf (Blooms from the top of 'N') -->
+              <path d="M 43,16 C 41,9 48,4 54,6 C 53.5,12 48,17 43,16 Z" fill="url(#softSproutSage)" />
+              <path d="M 44.5,14.5 C 48,10.5 51.5,8.5 53,7" stroke="#FFFFFF" stroke-width="0.8" stroke-linecap="round" opacity="0.9" />
+
+              <!-- Golden Almond Kernel Core (Pure nutrition essence) -->
+              <path d="M 33.5,27 C 36,30.5 37,34.5 35,37 C 33,39.5 30.5,39 29,36 C 27.5,33 29.5,29 33.5,27 Z" fill="url(#softAlmondGold)" opacity="0.95" />
+            </svg>
           </div>
 
           <!-- Brand Wordmark & Descriptor -->
           <div class="flex flex-col justify-center">
-            <div class="flex items-center gap-1">
-              <span class="font-serif text-[26px] font-bold tracking-tight text-forest-900 leading-none group-hover:text-forest-700 transition-colors">
+            <div class="flex items-center gap-1.5">
+              <span class="font-serif text-[27px] font-bold tracking-tight text-forest-900 leading-none group-hover:text-forest-700 transition-colors">
                 Nutr<span class="text-gold-500">i</span>sh
               </span>
               <span class="inline-block w-1.5 h-1.5 rounded-full bg-gold-500 mb-2 animate-pulse"></span>
             </div>
-            <span class="text-[9.5px] tracking-[0.22em] uppercase text-gold-600 font-extrabold mt-1">
-              Artisanal Harvests
+            <span class="text-[9.5px] tracking-[0.24em] uppercase text-gold-600 font-extrabold mt-1">
+              Artisanal Nuts &amp; Seeds
             </span>
           </div>
         </a>
@@ -1307,23 +1312,22 @@
         <div class="md:col-span-2 space-y-4">
           <!-- Footer Brand Identity Lockup -->
           <div class="flex items-center gap-3.5 group">
-            <div class="w-12 h-12 rounded-2xl bg-[#14261D] border border-gold-400/30 p-1 flex items-center justify-center shadow-soft-md">
-              <svg class="w-8 h-8 text-gold-400" viewBox="0 0 44 44" fill="none">
-                <circle cx="22" cy="22" r="19" stroke="#D49B55" stroke-width="0.75" stroke-dasharray="2 1.5" opacity="0.6" />
-                <path d="M16 13 C12 11 11 7 13 4 C16 5 17 9 16 13Z" fill="#94B89D" />
-                <path d="M18 12 C18 9 20 6 23 5 C22 8 20 11 18 12Z" fill="#D49B55" opacity="0.9" />
-                <path d="M15 31 L15 15 L19.5 15 L19.5 31 Z" fill="#D49B55" />
-                <path d="M19 16.5 L28 29 L30 29 L20.5 15 Z" fill="#FFFFFF" />
-                <path d="M28 31 L28 16.5 L30.5 15 C31.8 17.2 32 20 31 23 L30.5 31 Z" fill="#D49B55" />
-                <circle cx="22.5" cy="34" r="1.2" fill="#D49B55" />
+            <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-sm border border-gold-400/30 p-2 flex items-center justify-center shadow-soft-md">
+              <svg viewBox="0 0 64 64" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="28" stroke="#D49B55" stroke-width="0.75" stroke-dasharray="2 1.5" opacity="0.5" />
+                <path d="M 21,48 C 15,40 14,24 22,15 C 23.5,13 26,14.5 25.5,17 C 19.5,26 20.5,38 25,46 C 26,48 23,50 21,48 Z" fill="#E8B568" />
+                <path d="M 23,17 C 30,25 37,37 42,46 C 43.5,48.5 47,48 46,45 C 40,35 32,22 26,15 C 24,13 22,15 23,17 Z" fill="#FAF7F2" />
+                <path d="M 42,46 C 48,38 49,25 42,17 C 40.5,15 43,13 45,14.5 C 52,24 51,38 44,47.5 C 42.5,49 40.5,47.5 42,46 Z" fill="#E8B568" />
+                <path d="M 43,16 C 41,9 48,4 54,6 C 53.5,12 48,17 43,16 Z" fill="#9BC4A5" />
+                <path d="M 33.5,27 C 36,30.5 37,34.5 35,37 C 33,39.5 30.5,39 29,36 C 27.5,33 29.5,29 33.5,27 Z" fill="#E8B568" />
               </svg>
             </div>
             <div class="flex flex-col">
-              <span class="font-serif text-2xl font-bold tracking-tight text-white flex items-center gap-1">
+              <span class="font-serif text-2xl font-bold tracking-tight text-white flex items-center gap-1.5">
                 Nutr<span class="text-gold-400">i</span>sh
               </span>
-              <span class="text-[9.5px] tracking-[0.22em] uppercase text-gold-400 font-extrabold -mt-0.5">
-                Artisanal Harvests
+              <span class="text-[9.5px] tracking-[0.24em] uppercase text-gold-400 font-extrabold -mt-0.5">
+                Artisanal Nuts &amp; Seeds
               </span>
             </div>
           </div>
