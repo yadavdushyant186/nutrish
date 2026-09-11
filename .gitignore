@@ -1,0 +1,4 @@
+# Antigravity / AI Agent folders
+.agents/
+.gemini/
+*.log

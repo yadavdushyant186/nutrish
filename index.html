@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutrish — Artisanal Dry Fruits & Superfood Seeds (INR)</title>
+  <meta name="description" content="Nutrish delivers handpicked single-origin dry fruits (Almonds, Cashews, Walnuts, Pistachios) and raw superfood seeds (Chia, Flax, Pumpkin, Sunflower). Cold-stored, unbleached, and vacuum-sealed for peak crunch.">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: '#FAF7F2',
+            oat: {
+              50: '#FDFCF9',
+              100: '#FAF7F2',
+              200: '#F3EDE2',
+              300: '#E8DEC9',
+            },
+            forest: {
+              900: '#14261D',
+              800: '#1B3528',
+              700: '#244E3F',
+              600: '#2E614F',
+              500: '#3D7E67',
+            },
+            gold: {
+              100: '#FBF4E8',
+              200: '#F6E6CA',
+              400: '#E2B877',
+              500: '#D49B55',
+              600: '#BD8037',
+            },
+            walnut: {
+              100: '#F6EFEA',
+              300: '#D9BCAB',
+              500: '#A65D37',
+              700: '#733718',
+            },
+            sage: {
+              100: '#EBF2EC',
+              200: '#D7E5D9',
+              400: '#94B89D',
+              600: '#5F7F6B',
+            },
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft-sm': '0 4px 16px -2px rgba(36, 78, 63, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02)',
+            'soft-md': '0 12px 30px -6px rgba(36, 78, 63, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02)',
+            'soft-lg': '0 24px 48px -12px rgba(36, 78, 63, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03)',
+            'glow-gold': '0 8px 24px -4px rgba(212, 155, 85, 0.35)',
+            'glow-forest': '0 8px 24px -4px rgba(36, 78, 63, 0.3)',
+          },
+          borderRadius: {
+            '4xl': '2rem',
+            '5xl': '2.5rem',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FAF7F2;
+      color: #1B3528;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .bg-gradient-glow-warm {
+      background: radial-gradient(circle at 60% 20%, rgba(246, 230, 202, 0.6) 0%, rgba(250, 247, 242, 0) 70%);
+    }
+
+    .bg-gradient-glow-green {
+      background: radial-gradient(circle at 20% 60%, rgba(215, 229, 217, 0.45) 0%, rgba(250, 247, 242, 0) 65%);
+    }
+
+    .pill-transition {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-tactile:active {
+      transform: scale(0.97);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="selection:bg-gold-200 selection:text-forest-900 relative overflow-x-hidden">
+
+  <!-- Ambient Glow Backgrounds -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[700px] bg-gradient-glow-warm pointer-events-none -z-10"></div>
+  <div class="absolute top-[480px] left-0 w-[600px] h-[600px] bg-gradient-glow-green pointer-events-none -z-10"></div>
+
+  <!-- ==================== TOP ANNOUNCEMENT BANNER (INR) ==================== -->
+  <aside aria-label="Announcement" class="bg-forest-800 text-oat-100 text-xs py-2.5 px-4 text-center border-b border-forest-700/40">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 font-medium">
+      <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+      <span>Complimentary Heritage Brass Spoon on orders above ₹999</span>
+      <span class="hidden sm:inline text-forest-500">•</span>
+      <span class="hidden sm:inline text-gold-400">Free Express Shipping across India</span>
+      <span class="hidden sm:inline text-forest-500">•</span>
+      <span class="hidden md:inline">100% Unbleached, Cold-Stored Harvests</span>
+    </div>
+  </aside>
+
+  <!-- ==================== 1. STICKY HEADER ==================== -->
+  <header class="sticky top-0 z-40 w-full transition-all duration-300 backdrop-blur-md bg-[#FAF7F2]/90 border-b border-forest-700/8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-700 rounded-xl p-1">
+          <div class="w-10 h-10 rounded-2xl bg-forest-700 flex items-center justify-center text-oat-50 shadow-soft-sm group-hover:bg-forest-600 transition-colors">
+            <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.6 4.6 8.4C8 21.3 10 22 12 22s4-.7 5.4-1.6c2.8-1.8 4.6-4.9 4.6-8.4 0-5.5-4.5-10-10-10z"/>
+              <path d="M12 2v20"/>
+              <path d="M7 8c2.5 1.5 7.5 1.5 10 0"/>
+              <path d="M7 16c2.5-1.5 7.5-1.5 10 0"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-2xl font-bold tracking-tight text-forest-800">nutrish</span>
+            <span class="text-[10px] tracking-widest uppercase text-gold-600 font-semibold -mt-1">artisanal nuts & seeds</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-1 bg-white/80 p-1.5 rounded-full border border-forest-700/8 shadow-soft-sm">
+          <a href="#categories" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">Categories</a>
+          <a href="#shop" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">Dry Fruits</a>
+          <a href="#shop" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">Superfood Seeds</a>
+          <a href="#blends" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">Daily Blends</a>
+          <a href="#standards" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">Our Standard</a>
+          <a href="#gifting" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">Gift Boxes</a>
+          <a href="#faq" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">FAQ</a>
+        </nav>
+
+        <!-- Right Utility Actions & Shopping Cart Trigger -->
+        <div class="flex items-center gap-3">
+          
+          <button type="button" class="p-2.5 rounded-full text-forest-800 hover:bg-oat-200 transition-colors focus:outline-none focus:ring-2 focus:ring-forest-700" aria-label="Search nuts and seeds">
+            <i data-lucide="search" class="w-5 h-5"></i>
+          </button>
+
+          <!-- Cart Slide Drawer Trigger Button with INR -->
+          <button id="cart-drawer-toggle" type="button" class="btn-tactile relative flex items-center gap-2 bg-forest-700 hover:bg-forest-600 text-oat-50 px-4 py-2.5 rounded-full shadow-soft-md transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-forest-700" aria-label="View shopping cart">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            <span class="text-xs font-bold tracking-wide">Jar</span>
+            <span id="header-cart-count" class="w-5 h-5 rounded-full bg-gold-500 text-forest-900 text-xs font-bold flex items-center justify-center -mr-1">
+              2
+            </span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-menu-toggle" type="button" class="lg:hidden p-2 rounded-2xl text-forest-800 hover:bg-oat-200 transition-colors focus:outline-none focus:ring-2 focus:ring-forest-700" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-forest-700/10 bg-[#FAF7F2]/98 px-6 pt-3 pb-6 space-y-3">
+      <a href="#categories" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">Categories with Photos</a>
+      <a href="#shop" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">Dry Fruits (Almonds, Cashews, Walnuts, Pistachios)</a>
+      <a href="#shop" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">Superfood Seeds (Chia, Flax, Pumpkin, Sunflower)</a>
+      <a href="#blends" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">Daily Ritual Mixes</a>
+      <a href="#standards" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">The Nutrish Quality Standard</a>
+      <a href="#gifting" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">Artisanal Gift Hampers</a>
+      <a href="#faq" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">Storage & Freshness FAQ</a>
+      <div class="pt-4 border-t border-forest-700/10 flex items-center justify-between">
+        <span class="text-xs text-forest-800/70">Support: care@nutrish.in</span>
+        <button id="mobile-cart-btn" class="text-xs font-bold text-forest-700 flex items-center gap-1.5">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span>View Cart (<span class="cart-total-badge">2</span>)</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section class="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+          <!-- Left Column: Editorial Headline & Value Prop -->
+          <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+            
+            <!-- Soft Pill Eyebrow -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-sage-100 text-forest-700 text-xs sm:text-sm font-semibold border border-sage-200 shadow-soft-sm">
+              <span class="w-2 h-2 rounded-full bg-sage-500 animate-pulse"></span>
+              <span>100% Raw • Cold-Stored Freshness • Zero Chemical Polish</span>
+            </div>
+
+            <!-- Main Editorial Title -->
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-forest-800 tracking-tight leading-[1.12]">
+              Nature’s purest crunch. <br class="hidden sm:inline">
+              Crafted in its <span class="italic font-normal text-gold-600">most elegant form.</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-lg sm:text-xl text-forest-800/80 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Handpicked single-origin dry fruits and raw superfood seeds—from Kashmiri mountain walnuts to Austrian heirloom pumpkin seeds. Packed in vacuum-sealed glass jars to preserve wholesome buttery oils and vital minerals.
+            </p>
+
+            <!-- Dual Action CTAs in INR -->
+            <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <a href="#shop" class="btn-tactile w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-gold-500 hover:bg-gold-600 text-forest-900 font-bold text-base px-8 py-4 rounded-full shadow-glow-gold transition-all duration-200">
+                <span>Shop Fresh Harvest</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="#blends" class="btn-tactile w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-oat-100 text-forest-800 font-semibold text-base px-6 py-4 rounded-full border border-forest-700/15 shadow-soft-sm transition-all duration-200">
+                <i data-lucide="sparkles" class="w-4 h-4 text-gold-500"></i>
+                <span>Explore Daily Seed Mixes</span>
+              </a>
+            </div>
+
+            <!-- Trust Markers Strip -->
+            <div class="pt-8 border-t border-forest-700/10 flex flex-wrap items-center justify-center lg:justify-start gap-8 text-sm text-forest-800/75">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-forest-700"></i>
+                <span class="font-medium text-xs sm:text-sm">Never Bleached or Gassed</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="snowflake" class="w-5 h-5 text-sage-600"></i>
+                <span class="font-medium text-xs sm:text-sm">Cold-Chain Stored &lt;14°C</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="truck" class="w-5 h-5 text-gold-600"></i>
+                <span class="font-medium text-xs sm:text-sm">Free Express Shipping &gt; ₹999</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Featured Product Jar Card with Real Photo -->
+          <div class="lg:col-span-5 relative">
+            
+            <!-- Soft Organic Ambient Blob -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-gold-200/50 via-sage-200/30 to-walnut-100/40 rounded-5xl filter blur-2xl transform -rotate-2 -z-10"></div>
+
+            <!-- Central Soft Card -->
+            <div class="bg-white/95 backdrop-blur-md rounded-3xl p-6 sm:p-7 border border-forest-700/8 shadow-soft-lg space-y-6 relative">
+              
+              <!-- Card Header -->
+              <div class="flex items-center justify-between border-b border-forest-700/6 pb-4">
+                <div class="flex items-center gap-2">
+                  <span class="px-3 py-1 rounded-full bg-gold-100 text-gold-600 text-xs font-bold uppercase tracking-wider">
+                    Harvest of the Month
+                  </span>
+                </div>
+                <div class="flex items-center text-amber-500 text-xs font-bold gap-1">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <span>4.96 (1,420 reviews)</span>
+                </div>
+              </div>
+
+              <!-- Product Visual with Authentic Walnut Photography -->
+              <div class="relative rounded-2xl overflow-hidden shadow-soft-md border border-forest-700/8 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?auto=format&fit=crop&w=600&q=80" 
+                  alt="Kashmiri Snow Walnut Halves" 
+                  class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-forest-900/80 via-forest-900/20 to-transparent flex flex-col justify-end p-5 text-white">
+                  <span class="text-[11px] uppercase tracking-widest text-gold-300 font-semibold">Parihaspora Valley, Kashmir</span>
+                  <h3 class="font-serif text-2xl font-bold">Kashmiri Snow Walnut Halves</h3>
+                  <p class="text-xs text-sand-100/80 mt-1 line-clamp-1">
+                    Cold-cracked light amber halves. Rich in plant Omega-3 with zero bitterness.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Interactive Weight Selector & Price (INR) -->
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold uppercase tracking-wider text-forest-800/70">Select Net Weight:</span>
+                  <span class="text-xs text-sage-600 font-semibold">In stock • Vacuum Packed</span>
+                </div>
+
+                <!-- Weight Pill Buttons in INR -->
+                <div class="grid grid-cols-3 gap-2" id="hero-weight-selector">
+                  <button type="button" class="hero-weight-btn active py-2 rounded-xl text-xs font-bold border-2 border-forest-700 bg-forest-700 text-white transition-all text-center" data-weight="250g" data-price="₹499">
+                    250g Pouch
+                  </button>
+                  <button type="button" class="hero-weight-btn py-2 rounded-xl text-xs font-bold border border-forest-700/20 bg-white text-forest-800 hover:bg-oat-100 transition-all text-center" data-weight="500g" data-price="₹949">
+                    500g Jar
+                  </button>
+                  <button type="button" class="hero-weight-btn py-2 rounded-xl text-xs font-bold border border-forest-700/20 bg-white text-forest-800 hover:bg-oat-100 transition-all text-center" data-weight="1kg" data-price="₹1,799">
+                    1kg Bulk Box
+                  </button>
+                </div>
+
+                <!-- Price in INR and Quick Add to Cart Button -->
+                <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
+                  <div>
+                    <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Current Price</span>
+                    <span id="hero-product-price" class="font-serif text-2xl font-bold text-forest-800">₹499</span>
+                  </div>
+
+                  <button 
+                    type="button" 
+                    id="hero-add-to-cart"
+                    data-id="walnut-hero"
+                    data-name="Kashmiri Snow Walnut Halves"
+                    data-baseprice="499"
+                    data-weight="250g"
+                    class="btn-tactile inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-600 text-oat-50 px-6 py-3 rounded-full font-bold text-sm shadow-soft-md transition-all"
+                  >
+                    <i data-lucide="plus" class="w-4 h-4"></i>
+                    <span>Add to Jar</span>
+                  </button>
+                </div>
+
+              </div>
+
+              <!-- Floating Micro-Badge: Freshness Seal -->
+              <div class="absolute -bottom-4 -left-5 hidden sm:flex items-center gap-2.5 bg-white p-2.5 pr-4 rounded-2xl shadow-soft-lg border border-forest-700/8">
+                <div class="w-8 h-8 rounded-xl bg-sage-100 flex items-center justify-center text-forest-700">
+                  <i data-lucide="package-check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="text-[11px] font-bold text-forest-800">Oxygen-Free Sealed</p>
+                  <p class="text-[10px] text-sage-600">Stays fresh for 12 months</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. CATEGORY PHOTO SHOWCASE ==================== -->
+    <section id="categories" class="py-16 bg-white/80 border-y border-forest-700/6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+          <span class="text-xs uppercase tracking-widest text-gold-600 font-bold">Curated Varieties</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-forest-800 font-bold mt-1">
+            Shop by Category
+          </h2>
+          <p class="text-sm sm:text-base text-forest-800/70 max-w-xl mx-auto mt-2">
+            Each nut and seed is selected from its native, world-renowned growing region.
+          </p>
+        </div>
+
+        <!-- 7 Category Cards with Authentic Photography -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4">
+          
+          <!-- Category 1: Almonds -->
+          <a href="#shop" class="group flex flex-col items-center p-3 rounded-3xl bg-oat-100/90 hover:bg-white border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all text-center">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-sm border border-forest-700/10 group-hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=400&q=80" 
+                alt="Almonds" 
+                class="w-full h-full object-cover"
+              >
+            </div>
+            <span class="font-bold text-xs sm:text-sm text-forest-800 group-hover:text-gold-600 transition-colors">Almonds</span>
+            <span class="text-[11px] text-forest-800/60 mt-0.5">Mamra & California</span>
+          </a>
+
+          <!-- Category 2: Cashews -->
+          <a href="#shop" class="group flex flex-col items-center p-3 rounded-3xl bg-oat-100/90 hover:bg-white border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all text-center">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-sm border border-forest-700/10 group-hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1582293041079-7814c2f12063?auto=format&fit=crop&w=400&q=80" 
+                alt="Cashews" 
+                class="w-full h-full object-cover"
+              >
+            </div>
+            <span class="font-bold text-xs sm:text-sm text-forest-800 group-hover:text-gold-600 transition-colors">Cashews</span>
+            <span class="text-[11px] text-forest-800/60 mt-0.5">W240 Jumbo Whole</span>
+          </a>
+
+          <!-- Category 3: Walnuts -->
+          <a href="#shop" class="group flex flex-col items-center p-3 rounded-3xl bg-oat-100/90 hover:bg-white border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all text-center">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-sm border border-forest-700/10 group-hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?auto=format&fit=crop&w=400&q=80" 
+                alt="Walnuts" 
+                class="w-full h-full object-cover"
+              >
+            </div>
+            <span class="font-bold text-xs sm:text-sm text-forest-800 group-hover:text-gold-600 transition-colors">Walnuts</span>
+            <span class="text-[11px] text-forest-800/60 mt-0.5">Kashmiri Halves</span>
+          </a>
+
+          <!-- Category 4: Pistachios -->
+          <a href="#shop" class="group flex flex-col items-center p-3 rounded-3xl bg-oat-100/90 hover:bg-white border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all text-center">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-sm border border-forest-700/10 group-hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=400&q=80" 
+                alt="Pistachios" 
+                class="w-full h-full object-cover"
+              >
+            </div>
+            <span class="font-bold text-xs sm:text-sm text-forest-800 group-hover:text-gold-600 transition-colors">Pistachios</span>
+            <span class="text-[11px] text-forest-800/60 mt-0.5">Roasted & Salted</span>
+          </a>
+
+          <!-- Category 5: Chia & Flax Seeds -->
+          <a href="#shop" class="group flex flex-col items-center p-3 rounded-3xl bg-oat-100/90 hover:bg-white border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all text-center">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-sm border border-forest-700/10 group-hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1514733670139-4d87a1941d55?auto=format&fit=crop&w=400&q=80" 
+                alt="Chia and Flax Seeds" 
+                class="w-full h-full object-cover"
+              >
+            </div>
+            <span class="font-bold text-xs sm:text-sm text-forest-800 group-hover:text-gold-600 transition-colors">Chia & Flax</span>
+            <span class="text-[11px] text-forest-800/60 mt-0.5">Raw Superseeds</span>
+          </a>
+
+          <!-- Category 6: Pumpkin & Sunflower Seeds -->
+          <a href="#shop" class="group flex flex-col items-center p-3 rounded-3xl bg-oat-100/90 hover:bg-white border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all text-center">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-sm border border-forest-700/10 group-hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?auto=format&fit=crop&w=400&q=80" 
+                alt="Pumpkin and Sunflower Seeds" 
+                class="w-full h-full object-cover"
+              >
+            </div>
+            <span class="font-bold text-xs sm:text-sm text-forest-800 group-hover:text-gold-600 transition-colors">Pumpkin & Sun</span>
+            <span class="text-[11px] text-forest-800/60 mt-0.5">Mineral Rich Pepitas</span>
+          </a>
+
+          <!-- Category 7: Gift Boxes -->
+          <a href="#gifting" class="group flex flex-col items-center p-3 rounded-3xl bg-oat-100/90 hover:bg-white border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all text-center col-span-2 sm:col-span-1">
+            <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden mb-3 shadow-sm border border-forest-700/10 group-hover:scale-105 transition-transform duration-300">
+              <img 
+                src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=400&q=80" 
+                alt="Gift Hampers" 
+                class="w-full h-full object-cover"
+              >
+            </div>
+            <span class="font-bold text-xs sm:text-sm text-forest-800 group-hover:text-gold-600 transition-colors">Gift Hampers</span>
+            <span class="text-[11px] text-forest-800/60 mt-0.5">Festive Wooden Box</span>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 4. PRODUCT CATALOG IN INR ==================== -->
+    <section id="shop" class="py-20 md:py-28 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div class="space-y-3 max-w-2xl">
+            <span class="text-xs uppercase tracking-widest text-gold-600 font-bold">The Nutrish Collection</span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-forest-800 font-bold">
+              Unprocessed, Raw & Slow-Roasted Harvests
+            </h2>
+            <p class="text-base text-forest-800/75 font-normal">
+              Select net weight for each product. All prices in Indian Rupees (INR) with free express delivery over ₹999.
+            </p>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="flex flex-wrap items-center gap-2" id="catalog-filters">
+            <button type="button" class="catalog-filter active px-4 py-2 rounded-full text-xs font-bold bg-forest-700 text-white shadow-soft-sm transition-all" data-category="all">
+              All Harvests
+            </button>
+            <button type="button" class="catalog-filter px-4 py-2 rounded-full text-xs font-bold bg-white text-forest-800 border border-forest-700/10 hover:bg-oat-100 transition-all" data-category="dry-fruits">
+              Dry Fruits & Nuts
+            </button>
+            <button type="button" class="catalog-filter px-4 py-2 rounded-full text-xs font-bold bg-white text-forest-800 border border-forest-700/10 hover:bg-oat-100 transition-all" data-category="seeds">
+              Superfood Seeds
+            </button>
+            <button type="button" class="catalog-filter px-4 py-2 rounded-full text-xs font-bold bg-white text-forest-800 border border-forest-700/10 hover:bg-oat-100 transition-all" data-category="blends">
+              Curated Blends
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid with Real Product Photography -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+
+          <!-- Product 1: Mamra Almonds -->
+          <div class="product-card bg-white rounded-3xl overflow-hidden border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 flex flex-col justify-between" data-category="dry-fruits">
+            <div>
+              <div class="h-56 relative overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=600&q=80" 
+                  alt="Mamra Golden Almonds" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-forest-800/85 text-white text-xs font-semibold backdrop-blur-sm">
+                  Single-Origin
+                </span>
+                <span class="absolute top-4 right-4 text-xs font-bold text-forest-800 flex items-center gap-1 bg-white/90 px-2.5 py-0.5 rounded-full shadow-sm">
+                  ★ 4.98
+                </span>
+              </div>
+
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between text-xs text-gold-600 font-bold uppercase tracking-wider">
+                  <span>Wild High-Oil Harvest</span>
+                  <span class="text-forest-700/60 font-semibold">Iran / Kashmir</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-forest-800">Mamra Golden Almonds</h3>
+                <p class="text-xs sm:text-sm text-forest-800/70 leading-relaxed">
+                  Unlike commercial California almonds, Mamra almonds contain up to 50% natural almond oil. Intensely aromatic, crisp, and nutrient-packed.
+                </p>
+
+                <div class="flex items-center gap-2 pt-1 text-[11px] text-forest-700 font-medium">
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">High Vitamin E</span>
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">6g Protein/oz</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 space-y-4">
+              <!-- Weight Variant Tabs in INR -->
+              <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
+                <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="649">250g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="1199">500g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="2299">1kg</button>
+              </div>
+
+              <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
+                <div>
+                  <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
+                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹649</p>
+                </div>
+                <button 
+                  type="button" 
+                  class="add-to-cart-btn btn-tactile inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-600 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-soft-sm transition-colors"
+                  data-id="almonds-mamra"
+                  data-name="Mamra Golden Almonds"
+                  data-price="649"
+                  data-weight="250g"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Add to Jar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2: Royal W240 Jumbo Cashews -->
+          <div class="product-card bg-white rounded-3xl overflow-hidden border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 flex flex-col justify-between" data-category="dry-fruits">
+            <div>
+              <div class="h-56 relative overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1582293041079-7814c2f12063?auto=format&fit=crop&w=600&q=80" 
+                  alt="Royal Jumbo Cashews" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-forest-800/85 text-white text-xs font-semibold backdrop-blur-sm">
+                  Whole Kernel W240
+                </span>
+                <span class="absolute top-4 right-4 text-xs font-bold text-forest-800 flex items-center gap-1 bg-white/90 px-2.5 py-0.5 rounded-full shadow-sm">
+                  ★ 4.95
+                </span>
+              </div>
+
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between text-xs text-gold-600 font-bold uppercase tracking-wider">
+                  <span>Slow-Steamed Creamy</span>
+                  <span class="text-forest-700/60 font-semibold">Mangalore Coast</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-forest-800">Royal Jumbo Cashews</h3>
+                <p class="text-xs sm:text-sm text-forest-800/70 leading-relaxed">
+                  Naturally sweet with an unmistakably rich, velvety texture. Never chemically bleached or artificially shined; purely unadulterated whole nuts.
+                </p>
+
+                <div class="flex items-center gap-2 pt-1 text-[11px] text-forest-700 font-medium">
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">Rich in Copper & Iron</span>
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">Unsalted Pure</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 space-y-4">
+              <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
+                <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="399">250g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="749">500g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="1449">1kg</button>
+              </div>
+
+              <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
+                <div>
+                  <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
+                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹399</p>
+                </div>
+                <button 
+                  type="button" 
+                  class="add-to-cart-btn btn-tactile inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-600 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-soft-sm transition-colors"
+                  data-id="cashews-royal"
+                  data-name="Royal Jumbo Cashews"
+                  data-price="399"
+                  data-weight="250g"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Add to Jar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3: Roasted Akbari Pistachios -->
+          <div class="product-card bg-white rounded-3xl overflow-hidden border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 flex flex-col justify-between" data-category="dry-fruits">
+            <div>
+              <div class="h-56 relative overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?auto=format&fit=crop&w=600&q=80" 
+                  alt="Roasted Akbari Pistachios" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-forest-800/85 text-white text-xs font-semibold backdrop-blur-sm">
+                  Naturally Opened
+                </span>
+                <span class="absolute top-4 right-4 text-xs font-bold text-forest-800 flex items-center gap-1 bg-white/90 px-2.5 py-0.5 rounded-full shadow-sm">
+                  ★ 4.97
+                </span>
+              </div>
+
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between text-xs text-gold-600 font-bold uppercase tracking-wider">
+                  <span>Himalayan Salt Roasted</span>
+                  <span class="text-forest-700/60 font-semibold">Kerman, Iran</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-forest-800">Roasted Akbari Pistachios</h3>
+                <p class="text-xs sm:text-sm text-forest-800/70 leading-relaxed">
+                  Long in-shell pistachios dry-roasted with pure Himalayan pink salt. Vibrant emerald green core with a crisp, aromatic crunch.
+                </p>
+
+                <div class="flex items-center gap-2 pt-1 text-[11px] text-forest-700 font-medium">
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">High Lutein</span>
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">Zero Palm Oil</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 space-y-4">
+              <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
+                <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="449">250g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="849">500g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="1599">1kg</button>
+              </div>
+
+              <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
+                <div>
+                  <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
+                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹449</p>
+                </div>
+                <button 
+                  type="button" 
+                  class="add-to-cart-btn btn-tactile inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-600 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-soft-sm transition-colors"
+                  data-id="pistachios-akbari"
+                  data-name="Roasted Akbari Pistachios"
+                  data-price="449"
+                  data-weight="250g"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Add to Jar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4: Organic Peruvian Chia Seeds -->
+          <div class="product-card bg-white rounded-3xl overflow-hidden border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 flex flex-col justify-between" data-category="seeds">
+            <div>
+              <div class="h-56 relative overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1514733670139-4d87a1941d55?auto=format&fit=crop&w=600&q=80" 
+                  alt="Organic Peruvian Chia Seeds" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-forest-800/85 text-white text-xs font-semibold backdrop-blur-sm">
+                  Certified Organic
+                </span>
+                <span class="absolute top-4 right-4 text-xs font-bold text-forest-800 flex items-center gap-1 bg-white/90 px-2.5 py-0.5 rounded-full shadow-sm">
+                  ★ 4.99
+                </span>
+              </div>
+
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between text-xs text-gold-600 font-bold uppercase tracking-wider">
+                  <span>Hydrophilic Mucilage</span>
+                  <span class="text-forest-700/60 font-semibold">Andes, Peru</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-forest-800">Organic Peruvian Chia Seeds</h3>
+                <p class="text-xs sm:text-sm text-forest-800/70 leading-relaxed">
+                  Triple-cleaned black and white chia. Expands 12x in liquid to form a soothing gut-healing gel. Unrivaled plant-based Omega-3 ALA content.
+                </p>
+
+                <div class="flex items-center gap-2 pt-1 text-[11px] text-forest-700 font-medium">
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">10g Fiber/2 tbsp</span>
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">Bioactive Gel</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 space-y-4">
+              <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
+                <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="249">250g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="449">500g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="799">1kg</button>
+              </div>
+
+              <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
+                <div>
+                  <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
+                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹249</p>
+                </div>
+                <button 
+                  type="button" 
+                  class="add-to-cart-btn btn-tactile inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-600 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-soft-sm transition-colors"
+                  data-id="seeds-chia"
+                  data-name="Organic Peruvian Chia Seeds"
+                  data-price="249"
+                  data-weight="250g"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Add to Jar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5: Austrian Heirloom Pumpkin Seeds (Pepitas) -->
+          <div class="product-card bg-white rounded-3xl overflow-hidden border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 flex flex-col justify-between" data-category="seeds">
+            <div>
+              <div class="h-56 relative overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?auto=format&fit=crop&w=600&q=80" 
+                  alt="Austrian Pumpkin Seeds" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-forest-800/85 text-white text-xs font-semibold backdrop-blur-sm">
+                  Styrian Heirloom
+                </span>
+                <span class="absolute top-4 right-4 text-xs font-bold text-forest-800 flex items-center gap-1 bg-white/90 px-2.5 py-0.5 rounded-full shadow-sm">
+                  ★ 4.96
+                </span>
+              </div>
+
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between text-xs text-gold-600 font-bold uppercase tracking-wider">
+                  <span>Hull-less Emerald Seed</span>
+                  <span class="text-forest-700/60 font-semibold">Styria, Austria</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-forest-800">Austrian Pumpkin Pepitas</h3>
+                <p class="text-xs sm:text-sm text-forest-800/70 leading-relaxed">
+                  Deep dark green seeds naturally grown without woody shells. Exceptionally rich in bioavailable zinc, magnesium, and natural tryptophan for restful sleep.
+                </p>
+
+                <div class="flex items-center gap-2 pt-1 text-[11px] text-forest-700 font-medium">
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">High Elemental Zinc</span>
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">9g Protein/serving</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 space-y-4">
+              <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
+                <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="299">250g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="549">500g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="999">1kg</button>
+              </div>
+
+              <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
+                <div>
+                  <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
+                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹299</p>
+                </div>
+                <button 
+                  type="button" 
+                  class="add-to-cart-btn btn-tactile inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-600 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-soft-sm transition-colors"
+                  data-id="seeds-pumpkin"
+                  data-name="Austrian Pumpkin Pepitas"
+                  data-price="299"
+                  data-weight="250g"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Add to Jar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6: The Morning Radiance Seed & Nut Blend -->
+          <div class="product-card bg-white rounded-3xl overflow-hidden border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 flex flex-col justify-between" data-category="blends">
+            <div>
+              <div class="h-56 relative overflow-hidden group">
+                <img 
+                  src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" 
+                  alt="The Morning Radiance Blend" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-forest-800/85 text-white text-xs font-semibold backdrop-blur-sm">
+                  Signature Mix
+                </span>
+                <span class="absolute top-4 right-4 text-xs font-bold text-forest-800 flex items-center gap-1 bg-white/90 px-2.5 py-0.5 rounded-full shadow-sm">
+                  ★ 4.98
+                </span>
+              </div>
+
+              <div class="p-6 space-y-3">
+                <div class="flex items-center justify-between text-xs text-gold-600 font-bold uppercase tracking-wider">
+                  <span>Golden Ratio Medley</span>
+                  <span class="text-forest-700/60 font-semibold">Artisan Batch</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-forest-800">The Morning Radiance Blend</h3>
+                <p class="text-xs sm:text-sm text-forest-800/70 leading-relaxed">
+                  Harmonized medley of Mamra Almond flakes, Kashmiri Walnut nibs, organic Chia, golden Flax, and roasted Pepitas. Perfect daily boost for breakfast bowls.
+                </p>
+
+                <div class="flex items-center gap-2 pt-1 text-[11px] text-forest-700 font-medium">
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">5-Seed & Nut Synergy</span>
+                  <span class="px-2.5 py-0.5 rounded-md bg-sage-100 border border-sage-200">Ready-To-Sprinkle</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 space-y-4">
+              <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
+                <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="499">250g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="899">500g</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="1699">1kg</button>
+              </div>
+
+              <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
+                <div>
+                  <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
+                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹499</p>
+                </div>
+                <button 
+                  type="button" 
+                  class="add-to-cart-btn btn-tactile inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-600 text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-soft-sm transition-colors"
+                  data-id="blend-radiance"
+                  data-name="The Morning Radiance Blend"
+                  data-price="499"
+                  data-weight="250g"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Add to Jar</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. WHY NUTRISH STANDARDS ==================== -->
+    <section id="standards" class="py-20 bg-white border-t border-forest-700/6 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <span class="text-xs uppercase tracking-widest text-gold-600 font-bold">The Nutrish Standard</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-forest-800 font-bold">
+            How True Nuts & Seeds Should Taste
+          </h2>
+          <p class="text-base sm:text-lg text-forest-800/75 leading-relaxed font-normal">
+            Most supermarket nuts spend 18 months sitting in warm warehouses, chemically bleached to look bright white. Here is how Nutrish returns to pure, uncompromised harvest craft:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="bg-oat-100 rounded-3xl p-8 border border-forest-700/8 shadow-soft-sm space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-gold-200/80 text-forest-800 flex items-center justify-center">
+              <i data-lucide="shield-off" class="w-7 h-7 text-gold-600"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-forest-800">Zero Chemical Bleaching</h3>
+            <p class="text-forest-800/75 text-sm leading-relaxed">
+              We never use sulfur dioxide or chlorine gas to artificially whiten cashews and pistachios. You taste the true, earthy golden harvest with its protective skin nutrients intact.
+            </p>
+            <div class="text-xs font-bold text-forest-700 pt-2 flex items-center gap-1.5">
+              <span>Naturally sun-cured</span>
+              <i data-lucide="check" class="w-4 h-4"></i>
+            </div>
+          </div>
+
+          <div class="bg-oat-100 rounded-3xl p-8 border border-forest-700/8 shadow-soft-sm space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-sage-200 text-forest-800 flex items-center justify-center">
+              <i data-lucide="snowflake" class="w-7 h-7 text-forest-700"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-forest-800">Cold-Stored Below 14°C</h3>
+            <p class="text-forest-800/75 text-sm leading-relaxed">
+              Delicate omega fats oxidize in warm ambient air, causing that unpleasant bitter aftertaste in commercial walnuts. Our temperature-controlled cold rooms guarantee a fresh, sweet snap.
+            </p>
+            <div class="text-xs font-bold text-forest-700 pt-2 flex items-center gap-1.5">
+              <span>Prevents oil oxidation</span>
+              <i data-lucide="check" class="w-4 h-4"></i>
+            </div>
+          </div>
+
+          <div class="bg-oat-100 rounded-3xl p-8 border border-forest-700/8 shadow-soft-sm space-y-4">
+            <div class="w-14 h-14 rounded-2xl bg-walnut-100 text-walnut-500 flex items-center justify-center">
+              <i data-lucide="flame" class="w-7 h-7 text-walnut-500"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-forest-800">Slow Artisan Dry Roasting</h3>
+            <p class="text-forest-800/75 text-sm leading-relaxed">
+              When we roast, we never submerge nuts in cheap palm or canola oils. We slow-tumble them in cast iron roasters with raw Himalayan rock salt to celebrate their natural essential crunch.
+            </p>
+            <div class="text-xs font-bold text-forest-700 pt-2 flex items-center gap-1.5">
+              <span>Zero added cooking oils</span>
+              <i data-lucide="check" class="w-4 h-4"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 6. DAILY RITUALS & CULINARY INSPIRATION ==================== -->
+    <section id="blends" class="py-20 md:py-28 bg-oat-100/60 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <span class="text-xs uppercase tracking-widest text-gold-600 font-bold">Daily Rituals</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-forest-800 font-bold">
+            How to Nourish with Nuts & Seeds Daily
+          </h2>
+          <p class="text-base text-forest-800/75">
+            Four simple, delicious culinary rituals to naturally incorporate dense micronutrients into your day:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div class="bg-white rounded-3xl p-6 border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-2xl bg-gold-100 text-gold-600 flex items-center justify-center font-bold text-sm">
+                01
+              </div>
+              <h3 class="font-serif text-xl font-bold text-forest-800">The Power Chia Porridge</h3>
+              <p class="text-xs sm:text-sm text-forest-800/70 leading-relaxed">
+                Stir 2 tbsp Peruvian Chia and golden flax into warm milk with sliced Mamra Almonds and wild honey.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-forest-700/8 text-xs font-semibold text-gold-600">
+              ✦ Focus: Sustained morning satiety
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-2xl bg-sage-100 text-forest-700 flex items-center justify-center font-bold text-sm">
+                02
+              </div>
+              <h3 class="font-serif text-xl font-bold text-forest-800">The 3:00 PM Desk Rescue</h3>
+              <p class="text-xs sm:text-sm text-forest-800/70 leading-relaxed">
+                A small handful of salted Iranian pistachios and buttery jumbo cashews gives clean tyrosine and magnesium without the coffee crash.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-forest-700/8 text-xs font-semibold text-forest-700">
+              ✦ Focus: Adrenal balance & focus
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-2xl bg-sand-200 text-forest-800 flex items-center justify-center font-bold text-sm">
+                03
+              </div>
+              <h3 class="font-serif text-xl font-bold text-forest-800">Emerald Salad Crunch</h3>
+              <p class="text-xs sm:text-sm text-forest-800/70 leading-relaxed">
+                Lightly toast raw Austrian pumpkin and sunflower seeds in a dry pan with rock salt; toss over fresh salads and warm soups.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-forest-700/8 text-xs font-semibold text-gold-600">
+              ✦ Focus: Zinc & cellular protection
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-10 h-10 rounded-2xl bg-walnut-100 text-walnut-500 flex items-center justify-center font-bold text-sm">
+                04
+              </div>
+              <h3 class="font-serif text-xl font-bold text-forest-800">Walnut & Honey Pairing</h3>
+              <p class="text-xs sm:text-sm text-forest-800/70 leading-relaxed">
+                Crush Kashmiri snow walnuts over fresh curd with a drizzle of raw mountain honey before bed for natural melatonin release.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-forest-700/8 text-xs font-semibold text-walnut-500">
+              ✦ Focus: Restorative deep sleep
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 7. ARTISANAL GIFTING BOXES (INR) ==================== -->
+    <section id="gifting" class="py-20 md:py-28 bg-white relative">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-gradient-to-br from-forest-800 via-forest-700 to-forest-900 rounded-5xl p-8 sm:p-14 text-white shadow-soft-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden">
+          
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-gold-400/15 filter blur-3xl pointer-events-none"></div>
+
+          <div class="lg:col-span-7 space-y-6">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-gold-300 text-xs font-bold backdrop-blur-sm border border-white/10">
+              <i data-lucide="gift" class="w-3.5 h-3.5 text-gold-400"></i>
+              <span>Festive & Corporate Gifting</span>
+            </span>
+
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+              The Emperor’s Nut & Seed Chest
+            </h2>
+
+            <p class="text-sand-100/80 text-sm sm:text-base leading-relaxed font-normal">
+              Presented in a handcrafted reclaimed pine wood box with brass clasps. Features four signature 350g embossed glass jars: Mamra Almonds, W240 Cashews, Kashmiri Walnuts, and Iranian Salted Pistachios, paired with raw mountain honey and a wooden serving spoon.
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <a href="#shop" class="btn-tactile inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-forest-900 font-bold text-sm px-7 py-3.5 rounded-full shadow-glow-gold transition-all">
+                <span>Order Gift Box — ₹2,499</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <span class="text-xs text-sand-100/60 font-medium">Custom branding available on bulk corporate orders</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-white/20 group relative">
+              <img 
+                src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=600&q=80" 
+                alt="Emperor's Gift Chest" 
+                class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-forest-900/90 via-transparent to-transparent flex flex-col justify-end p-5 text-white">
+                <h4 class="font-serif text-lg font-bold">Handcrafted Pine Wood Chest</h4>
+                <p class="text-xs text-gold-300">✦ Reusable Embossed Glass Jars with Brass Lid</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 8. TESTIMONIALS ==================== -->
+    <section class="py-20 bg-oat-100/60 border-t border-forest-700/6 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+          <span class="text-xs uppercase tracking-widest text-gold-600 font-bold">Verified Freshness</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-forest-800 font-bold">
+            Loved by Connoisseurs Across India
+          </h2>
+          <p class="text-base text-forest-800/75">
+            Real feedback on the difference of unbleached, cold-stored nuts and seeds.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <div class="bg-white rounded-3xl p-8 border border-forest-700/8 shadow-soft-sm space-y-4 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex text-amber-500 gap-1">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="font-serif text-lg text-forest-800 italic leading-snug">
+                “I never knew walnuts could taste sweet and creamy until Nutrish. The store-bought ones always had that bitter oil aftertaste. These are in a whole different league.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-forest-700/6 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center font-bold text-sm">
+                DR
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-forest-800">Devin R.</h4>
+                <p class="text-xs text-forest-800/60">Verified Buyer • Kashmiri Walnuts 1kg</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 border border-forest-700/8 shadow-soft-sm space-y-4 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex text-amber-500 gap-1">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="font-serif text-lg text-forest-800 italic leading-snug">
+                “The Austrian pumpkin seeds are astonishingly green and plump. My children eat them by the spoonful. We subscribe to the 1kg monthly pouch!”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-forest-700/6 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-sage-200 text-forest-700 flex items-center justify-center font-bold text-sm">
+                NM
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-forest-800">Nadia M.</h4>
+                <p class="text-xs text-forest-800/60">Verified Buyer • Pumpkin Seeds 1kg</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 border border-forest-700/8 shadow-soft-sm space-y-4 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex text-amber-500 gap-1">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              </div>
+              <p class="font-serif text-lg text-forest-800 italic leading-snug">
+                “The gift box made an extraordinary impression on our Diwali corporate clients. The reusable glass jars and fresh roasted pistachios were praised by everyone.”
+              </p>
+            </div>
+            <div class="pt-4 border-t border-forest-700/6 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-walnut-100 text-walnut-500 flex items-center justify-center font-bold text-sm">
+                AL
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-forest-800">Ananya L.</h4>
+                <p class="text-xs text-forest-800/60">Bengaluru • 25 Gift Hampers</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 9. STORAGE & SEED FAQ (INR) ==================== -->
+    <section id="faq" class="py-20 bg-white relative">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center space-y-3 mb-16">
+          <span class="text-xs uppercase tracking-widest text-gold-600 font-bold">Frequently Asked</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-forest-800 font-bold">
+            Care, Storage & Sourcing Inquiries
+          </h2>
+          <p class="text-base text-forest-800/75">
+            How to keep your artisanal harvest at its crisp, aromatic best.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+
+          <div class="faq-item border border-forest-700/10 rounded-2xl bg-oat-100/50 overflow-hidden">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-forest-800 focus:outline-none">
+              <span>Should I store my nuts and seeds in the pantry or refrigerator?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-forest-800/75 leading-relaxed">
+              Because our nuts are cold-stored and unbleached with zero chemical preservatives, they are rich in living active oils. For immediate enjoyment (within 3–4 weeks), a cool, dark pantry in an airtight jar is ideal. For long-term freshness (up to 12 months), we highly recommend keeping them in the refrigerator or freezer.
+            </div>
+          </div>
+
+          <div class="faq-item border border-forest-700/10 rounded-2xl bg-oat-100/50 overflow-hidden">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-forest-800 focus:outline-none">
+              <span>What makes Mamra Almonds different from regular California almonds?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-forest-800/75 leading-relaxed">
+              California almonds are pasteurized by steam or PPO gas to mass-produce uniform sizes. Mamra almonds are grown organically in high-altitude valleys, harvested wild, and boast up to 50% natural almond oil (compared to 18–25% in commercial almonds). They have an irregular boat shape and superior sweetness.
+            </div>
+          </div>
+
+          <div class="faq-item border border-forest-700/10 rounded-2xl bg-oat-100/50 overflow-hidden">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-forest-800 focus:outline-none">
+              <span>Are your chia and flax seeds organic and tested for heavy metals?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-forest-800/75 leading-relaxed">
+              Yes. Every harvest batch undergoes independent third-party lab verification for microbial safety, heavy metals, and zero pesticide residues. Our Peruvian chia seeds are 100% Organic certified.
+            </div>
+          </div>
+
+          <div class="faq-item border border-forest-700/10 rounded-2xl bg-oat-100/50 overflow-hidden">
+            <button type="button" class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-forest-800 focus:outline-none">
+              <span>How does shipping work across India?</span>
+              <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-gold-600 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-sm text-forest-800/75 leading-relaxed">
+              Orders are packaged fresh from our climate-controlled cellars in multi-barrier nitrogen-flushed pouches or sealed glass jars. We ship across India via BlueDart and Delhivery Express. All orders over ₹999 receive complimentary express shipping.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 10. NEWSLETTER CALLOUT ==================== -->
+    <section class="py-16 bg-oat-100 border-t border-forest-700/8 text-center">
+      <div class="max-w-2xl mx-auto px-4 space-y-4">
+        <span class="text-xs uppercase tracking-widest text-gold-600 font-bold">The Fresh Harvest Bulletin</span>
+        <h2 class="font-serif text-3xl font-bold text-forest-800">Enjoy ₹150 Off Your First Harvest Jar</h2>
+        <p class="text-sm text-forest-800/70">
+          Subscribe for seasonal crop alerts, rare micro-batch harvests, and chef-curated seed recipes. Use code <strong>NUTRISH150</strong>.
+        </p>
+        <form id="newsletter-form" class="pt-2 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input 
+            type="email" 
+            placeholder="Enter your email address" 
+            required 
+            class="flex-1 px-5 py-3 rounded-full bg-white text-forest-800 placeholder-forest-800/50 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500 shadow-soft-sm border border-forest-700/10"
+          >
+          <button 
+            type="submit" 
+            class="btn-tactile px-6 py-3 rounded-full bg-forest-700 hover:bg-forest-600 text-white font-bold text-sm shadow-soft-sm transition-colors"
+          >
+            Claim ₹150 Off
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 11. FOOTER ==================== -->
+  <footer class="bg-forest-900 text-sand-100/75 pt-16 pb-12 text-sm border-t border-forest-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
+        
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-xl bg-gold-500 text-forest-900 flex items-center justify-center font-bold">
+              N
+            </div>
+            <span class="font-serif text-2xl font-bold tracking-tight text-white">nutrish</span>
+          </div>
+          <p class="text-xs sm:text-sm text-sand-100/70 leading-relaxed max-w-sm">
+            Curators of single-origin dry fruits, raw superfood seeds, and artisanal blends. Dedicated to uncompromised crunch, cold storage, and chemical-free whole food living in India.
+          </p>
+          <div class="flex items-center gap-3 pt-2 text-gold-400">
+            <a href="#" class="p-2 rounded-full bg-forest-800 hover:bg-forest-700 text-white transition-colors" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="#" class="p-2 rounded-full bg-forest-800 hover:bg-forest-700 text-white transition-colors" aria-label="Twitter"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+            <a href="#" class="p-2 rounded-full bg-forest-800 hover:bg-forest-700 text-white transition-colors" aria-label="Facebook"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-white">Dry Fruits</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="#shop" class="hover:text-gold-400 transition-colors">Mamra Almonds</a></li>
+            <li><a href="#shop" class="hover:text-gold-400 transition-colors">W240 Jumbo Cashews</a></li>
+            <li><a href="#shop" class="hover:text-gold-400 transition-colors">Kashmiri Snow Walnuts</a></li>
+            <li><a href="#shop" class="hover:text-gold-400 transition-colors">Roasted Salted Pistachios</a></li>
+            <li><a href="#shop" class="hover:text-gold-400 transition-colors">Royal Medjool Dates</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-white">Superfood Seeds</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="#shop" class="hover:text-gold-400 transition-colors">Organic Chia Seeds</a></li>
+            <li><a href="#shop" class="hover:text-gold-400 transition-colors">Golden Milled Flax</a></li>
+            <li><a href="#shop" class="hover:text-gold-400 transition-colors">Austrian Pumpkin Seeds</a></li>
+            <li><a href="#shop" class="hover:text-gold-400 transition-colors">Sunflower Kernels</a></li>
+            <li><a href="#blends" class="hover:text-gold-400 transition-colors">The Daily Seed Trio</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-3">
+          <h4 class="font-bold text-xs uppercase tracking-wider text-white">Company & Care</h4>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="#standards" class="hover:text-gold-400 transition-colors">Our Quality Standard</a></li>
+            <li><a href="#gifting" class="hover:text-gold-400 transition-colors">Artisanal Gift Hampers</a></li>
+            <li><a href="#faq" class="hover:text-gold-400 transition-colors">Storage Guidelines</a></li>
+            <li><a href="#privacy" class="hover:text-gold-400 transition-colors">FSSAI & Compliance</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-forest-800 flex flex-col sm:flex-row items-center justify-between text-xs text-sand-100/60 gap-4">
+        <p>© 2026 Nutrish India Inc. All prices in INR (₹) inclusive of all taxes.</p>
+        <p>Zero artificial polish • 100% Cold-chain stored</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== 12. INTERACTIVE CART DRAWER IN INR ==================== -->
+  <div id="cart-drawer-backdrop" class="fixed inset-0 bg-forest-900/40 backdrop-blur-sm z-50 hidden transition-opacity duration-300"></div>
+
+  <div id="cart-drawer" class="fixed top-0 right-0 w-full max-w-md h-full bg-white z-50 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    
+    <!-- Drawer Header -->
+    <div class="p-6 border-b border-forest-700/10 flex items-center justify-between bg-oat-50">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-forest-700"></i>
+        <h3 class="font-serif text-xl font-bold text-forest-800">Your Fresh Jar</h3>
+        <span id="drawer-cart-count" class="px-2 py-0.5 rounded-full bg-gold-200 text-forest-900 text-xs font-bold">2 items</span>
+      </div>
+      <button id="cart-close-btn" class="p-2 rounded-full text-forest-800 hover:bg-oat-200 transition-colors focus:outline-none" aria-label="Close cart drawer">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Free Shipping Bar (INR) -->
+    <div class="px-6 py-3 bg-sage-100/70 border-b border-sage-200 text-xs text-forest-800 font-medium flex items-center justify-between">
+      <div class="flex items-center gap-1.5">
+        <i data-lucide="truck" class="w-4 h-4 text-forest-700"></i>
+        <span id="free-shipping-text">Add ₹1.00 more for Free Express Delivery!</span>
+      </div>
+      <span class="font-bold text-forest-700">₹999 Free Limit</span>
+    </div>
+
+    <!-- Scrollable Items List -->
+    <div id="cart-items-list" class="flex-1 overflow-y-auto p-6 space-y-4">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Drawer Footer / Checkout in INR -->
+    <div class="p-6 border-t border-forest-700/10 bg-oat-50 space-y-4">
+      <div class="space-y-1.5 text-sm">
+        <div class="flex justify-between text-forest-800/70">
+          <span>Subtotal</span>
+          <span id="cart-subtotal" class="font-semibold text-forest-800">₹998</span>
+        </div>
+        <div class="flex justify-between text-forest-800/70">
+          <span>Cold-Storage Nitrogen Pack</span>
+          <span class="text-sage-600 font-semibold">Complimentary</span>
+        </div>
+        <div class="flex justify-between text-base font-bold text-forest-800 pt-2 border-t border-forest-700/8">
+          <span>Estimated Total (INR)</span>
+          <span id="cart-total" class="font-serif text-xl text-forest-800">₹998</span>
+        </div>
+      </div>
+
+      <button type="button" class="btn-tactile w-full py-4 rounded-full bg-forest-700 hover:bg-forest-600 text-white font-bold text-sm shadow-soft-md transition-all flex items-center justify-center gap-2">
+        <span>Proceed to Checkout (UPI / Cards / NetBanking)</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </button>
+
+      <p class="text-[11px] text-center text-forest-800/60 font-medium">
+        🔒 256-Bit Encrypted • 100% Freshness Guarantee
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Toast Notification for Add-to-Cart -->
+  <div id="cart-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-forest-800 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 border border-forest-700">
+      <div class="w-6 h-6 rounded-full bg-gold-400 text-forest-900 flex items-center justify-center font-bold text-xs">✓</div>
+      <div class="text-xs">
+        <p class="font-bold" id="toast-title">Added to your Jar!</p>
+        <p class="text-sand-100/70" id="toast-desc">Mamra Golden Almonds (250g)</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    lucide.createIcons();
+
+    // 1. Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileToggle && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+      });
+      mobileMenu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // 2. Cart Data in INR
+    let cart = [
+      { id: 'walnut-hero', name: 'Kashmiri Snow Walnut Halves', weight: '250g', price: 499, qty: 1 },
+      { id: 'blend-radiance', name: 'The Morning Radiance Blend', weight: '250g', price: 499, qty: 1 }
+    ];
+
+    const cartBackdrop = document.getElementById('cart-drawer-backdrop');
+    const cartDrawer = document.getElementById('cart-drawer');
+    const cartToggle = document.getElementById('cart-drawer-toggle');
+    const cartClose = document.getElementById('cart-close-btn');
+    const mobileCartBtn = document.getElementById('mobile-cart-btn');
+
+    function openCart() {
+      cartBackdrop.classList.remove('hidden');
+      setTimeout(() => {
+        cartDrawer.classList.remove('translate-x-full');
+      }, 10);
+    }
+
+    function closeCart() {
+      cartDrawer.classList.add('translate-x-full');
+      setTimeout(() => {
+        cartBackdrop.classList.add('hidden');
+      }, 300);
+    }
+
+    if (cartToggle) cartToggle.addEventListener('click', openCart);
+    if (cartClose) cartClose.addEventListener('click', closeCart);
+    if (cartBackdrop) cartBackdrop.addEventListener('click', closeCart);
+    if (mobileCartBtn) mobileCartBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      openCart();
+    });
+
+    function showToast(title, desc) {
+      const toast = document.getElementById('cart-toast');
+      document.getElementById('toast-title').textContent = title;
+      document.getElementById('toast-desc').textContent = desc;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 2500);
+    }
+
+    function renderCart() {
+      const list = document.getElementById('cart-items-list');
+      const headerCount = document.getElementById('header-cart-count');
+      const drawerCount = document.getElementById('drawer-cart-count');
+      const subtotalEl = document.getElementById('cart-subtotal');
+      const totalEl = document.getElementById('cart-total');
+      const freeShippingText = document.getElementById('free-shipping-text');
+      const mobileBadges = document.querySelectorAll('.cart-total-badge');
+
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      headerCount.textContent = totalItems;
+      drawerCount.textContent = `${totalItems} item${totalItems === 1 ? '' : 's'}`;
+      mobileBadges.forEach(b => b.textContent = totalItems);
+
+      subtotalEl.textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+      totalEl.textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+
+      const threshold = 999;
+      if (subtotal >= threshold) {
+        freeShippingText.innerHTML = `<span class="text-forest-700 font-bold">🎉 You have unlocked Free Express Delivery!</span>`;
+      } else {
+        const diff = threshold - subtotal;
+        freeShippingText.textContent = `Add ₹${diff.toLocaleString('en-IN')} more for Free Express Delivery!`;
+      }
+
+      if (cart.length === 0) {
+        list.innerHTML = `
+          <div class="py-12 text-center text-forest-800/60 space-y-3">
+            <i data-lucide="shopping-bag" class="w-12 h-12 mx-auto text-forest-700/30"></i>
+            <p class="font-serif text-lg font-bold text-forest-800">Your Jar is currently empty</p>
+            <p class="text-xs">Explore our single-origin harvests and raw seeds to fill it.</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      list.innerHTML = cart.map((item, idx) => `
+        <div class="p-3.5 bg-oat-100/70 rounded-2xl border border-forest-700/8 flex items-center justify-between gap-3">
+          <div class="flex-1 space-y-0.5">
+            <h4 class="font-bold text-xs text-forest-800">${item.name}</h4>
+            <p class="text-[11px] text-forest-800/60">${item.weight} • ₹${item.price.toLocaleString('en-IN')}</p>
+            <p class="text-xs font-bold text-forest-700">₹${(item.price * item.qty).toLocaleString('en-IN')}</p>
+          </div>
+
+          <div class="flex items-center gap-1.5 bg-white rounded-full border border-forest-700/10 px-2 py-1 shadow-sm">
+            <button class="cart-minus p-1 text-forest-800 hover:text-forest-600" data-index="${idx}">
+              <i data-lucide="minus" class="w-3 h-3"></i>
+            </button>
+            <span class="text-xs font-bold w-4 text-center text-forest-800">${item.qty}</span>
+            <button class="cart-plus p-1 text-forest-800 hover:text-forest-600" data-index="${idx}">
+              <i data-lucide="plus" class="w-3 h-3"></i>
+            </button>
+          </div>
+
+          <button class="cart-remove p-1 text-forest-800/40 hover:text-red-500 transition-colors" data-index="${idx}" title="Remove item">
+            <i data-lucide="trash-2" class="w-4 h-4"></i>
+          </button>
+        </div>
+      `).join('');
+
+      lucide.createIcons();
+
+      list.querySelectorAll('.cart-plus').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.getAttribute('data-index'));
+          cart[idx].qty += 1;
+          renderCart();
+        });
+      });
+
+      list.querySelectorAll('.cart-minus').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.getAttribute('data-index'));
+          if (cart[idx].qty > 1) {
+            cart[idx].qty -= 1;
+          } else {
+            cart.splice(idx, 1);
+          }
+          renderCart();
+        });
+      });
+
+      list.querySelectorAll('.cart-remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const idx = parseInt(btn.getAttribute('data-index'));
+          cart.splice(idx, 1);
+          renderCart();
+        });
+      });
+    }
+
+    renderCart();
+
+    // 3. Hero Product Weight Selector & Add-to-Cart (INR)
+    const heroWeightBtns = document.querySelectorAll('#hero-weight-selector .hero-weight-btn');
+    const heroPriceEl = document.getElementById('hero-product-price');
+    const heroAddBtn = document.getElementById('hero-add-to-cart');
+
+    heroWeightBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        heroWeightBtns.forEach(b => {
+          b.classList.remove('active', 'border-2', 'border-forest-700', 'bg-forest-700', 'text-white');
+          b.classList.add('border', 'border-forest-700/20', 'bg-white', 'text-forest-800');
+        });
+        btn.classList.remove('border', 'border-forest-700/20', 'bg-white', 'text-forest-800');
+        btn.classList.add('active', 'border-2', 'border-forest-700', 'bg-forest-700', 'text-white');
+
+        const price = btn.getAttribute('data-price');
+        const weight = btn.getAttribute('data-weight');
+        heroPriceEl.textContent = price;
+
+        heroAddBtn.setAttribute('data-price', price.replace('₹', '').replace(',', ''));
+        heroAddBtn.setAttribute('data-weight', weight);
+      });
+    });
+
+    if (heroAddBtn) {
+      heroAddBtn.addEventListener('click', () => {
+        const id = heroAddBtn.getAttribute('data-id');
+        const name = heroAddBtn.getAttribute('data-name');
+        const weight = heroAddBtn.getAttribute('data-weight');
+        const price = parseInt(heroAddBtn.getAttribute('data-price'));
+
+        const existing = cart.find(i => i.name === name && i.weight === weight);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({ id, name, weight, price, qty: 1 });
+        }
+
+        renderCart();
+        showToast("Added to your Jar!", `${name} (${weight})`);
+        openCart();
+      });
+    }
+
+    // 4. Product Catalog Weight Switchers & Add-to-Cart Buttons (INR)
+    document.querySelectorAll('.product-card').forEach(card => {
+      const weightBtns = card.querySelectorAll('.weight-opt');
+      const priceEl = card.querySelector('.product-price');
+      const addBtn = card.querySelector('.add-to-cart-btn');
+
+      weightBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          weightBtns.forEach(b => {
+            b.classList.remove('active', 'bg-white', 'shadow-sm');
+            b.classList.add('text-forest-800/70');
+          });
+          btn.classList.remove('text-forest-800/70');
+          btn.classList.add('active', 'bg-white', 'shadow-sm');
+
+          const price = parseInt(btn.getAttribute('data-price'));
+          const weight = btn.getAttribute('data-weight');
+
+          priceEl.textContent = `₹${price.toLocaleString('en-IN')}`;
+          addBtn.setAttribute('data-price', price);
+          addBtn.setAttribute('data-weight', weight);
+        });
+      });
+
+      addBtn.addEventListener('click', () => {
+        const id = addBtn.getAttribute('data-id');
+        const name = addBtn.getAttribute('data-name');
+        const weight = addBtn.getAttribute('data-weight');
+        const price = parseInt(addBtn.getAttribute('data-price'));
+
+        const existing = cart.find(i => i.name === name && i.weight === weight);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({ id, name, weight, price, qty: 1 });
+        }
+
+        renderCart();
+        showToast("Added to your Jar!", `${name} (${weight})`);
+        openCart();
+      });
+    });
+
+    // 5. Category Filter
+    const filterBtns = document.querySelectorAll('.catalog-filter');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-category');
+
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-forest-700', 'text-white', 'shadow-soft-sm');
+          b.classList.add('bg-white', 'text-forest-800');
+        });
+        btn.classList.remove('bg-white', 'text-forest-800');
+        btn.classList.add('active', 'bg-forest-700', 'text-white', 'shadow-soft-sm');
+
+        productCards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (cat === 'all' || cardCat === cat) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // 6. FAQ Accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const toggle = item.querySelector('.faq-toggle');
+      const content = item.querySelector('.faq-content');
+      const icon = item.querySelector('.faq-icon');
+
+      toggle.addEventListener('click', () => {
+        const isHidden = content.classList.contains('hidden');
+
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.querySelector('.faq-content').classList.add('hidden');
+          other.querySelector('.faq-icon').classList.remove('rotate-180');
+        });
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // 7. Newsletter Submission
+    const newsForm = document.getElementById('newsletter-form');
+    if (newsForm) {
+      newsForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        newsForm.innerHTML = `
+          <div class="py-2.5 px-6 rounded-full bg-sage-200 text-forest-800 font-bold text-xs flex items-center justify-center gap-2">
+            <span>🎉 Thank you! Your code NUTRISH150 is active for ₹150 off.</span>
+          </div>
+        `;
+      });
+    }
+  </script>
+</body>
+</html>
