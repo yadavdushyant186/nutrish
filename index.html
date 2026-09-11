@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nutrish — Artisanal Dry Fruits & Superfood Seeds (INR)</title>
   <meta name="description" content="Nutrish delivers handpicked single-origin dry fruits (Almonds, Cashews, Walnuts, Pistachios) and raw superfood seeds (Chia, Flax, Pumpkin, Sunflower). Cold-stored, unbleached, and vacuum-sealed for peak crunch.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
 
   <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -139,18 +140,54 @@
       <div class="flex items-center justify-between h-20">
 
         <!-- Brand Logo -->
-        <a href="#" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-700 rounded-xl p-1">
-          <div class="w-10 h-10 rounded-2xl bg-forest-700 flex items-center justify-center text-oat-50 shadow-soft-sm group-hover:bg-forest-600 transition-colors">
-            <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2C6.5 2 2 6.5 2 12c0 3.5 1.8 6.6 4.6 8.4C8 21.3 10 22 12 22s4-.7 5.4-1.6c2.8-1.8 4.6-4.9 4.6-8.4 0-5.5-4.5-10-10-10z"/>
-              <path d="M12 2v20"/>
-              <path d="M7 8c2.5 1.5 7.5 1.5 10 0"/>
-              <path d="M7 16c2.5-1.5 7.5-1.5 10 0"/>
-            </svg>
+        <a href="#" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-700 rounded-2xl p-1 transition-all" aria-label="Nutrish Artisanal Nuts and Seeds">
+          <!-- Artisanal Crest Icon -->
+          <div class="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-forest-800 via-forest-900 to-forest-950 p-[1.5px] shadow-soft-md group-hover:shadow-glow-gold transition-all duration-300 group-hover:scale-[1.03]">
+            <div class="w-full h-full rounded-[14px] bg-[#14261D] flex items-center justify-center relative overflow-hidden border border-gold-400/30">
+              <!-- Golden Ambient Sheen -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-gold-500/10 to-gold-300/25 pointer-events-none"></div>
+              
+              <!-- Bespoke SVG Monogram Emblem -->
+              <svg class="w-8 h-8 text-gold-400 transition-transform duration-300 group-hover:rotate-3" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="emblemGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FDF3E3" />
+                    <stop offset="40%" stop-color="#F2C879" />
+                    <stop offset="80%" stop-color="#D49B55" />
+                    <stop offset="100%" stop-color="#BD8037" />
+                  </linearGradient>
+                  <linearGradient id="emblemLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#94B89D" />
+                    <stop offset="100%" stop-color="#3D7E67" />
+                  </linearGradient>
+                </defs>
+                <!-- Delicate Filigree Ring -->
+                <circle cx="22" cy="22" r="19" stroke="url(#emblemGold)" stroke-width="0.75" stroke-dasharray="2 1.5" opacity="0.55" />
+                <!-- Almond / Seed Silhouette Outline -->
+                <path d="M22 6 C28 10 33 18 31 27 C29 35 22 38 18 36 C14 34 12 26 15 18 C17 12 20 7 22 6Z" fill="none" stroke="url(#emblemGold)" stroke-width="1" opacity="0.35" />
+                <!-- Sprouting Superfood Leaves -->
+                <path d="M16 13 C12 11 11 7 13 4 C16 5 17 9 16 13Z" fill="url(#emblemLeaf)" />
+                <path d="M18 12 C18 9 20 6 23 5 C22 8 20 11 18 12Z" fill="url(#emblemGold)" opacity="0.85" />
+                <!-- Stylized 'N' Monogram -->
+                <path d="M15 31 L15 15 L19.5 15 L19.5 31 Z" fill="url(#emblemGold)" />
+                <path d="M19 16.5 L28 29 L30 29 L20.5 15 Z" fill="#FFFFFF" opacity="0.95" />
+                <path d="M28 31 L28 16.5 L30.5 15 C31.8 17.2 32 20 31 23 L30.5 31 Z" fill="url(#emblemGold)" />
+                <circle cx="22.5" cy="34" r="1.2" fill="url(#emblemGold)" />
+              </svg>
+            </div>
           </div>
-          <div class="flex flex-col">
-            <span class="font-serif text-2xl font-bold tracking-tight text-forest-800">nutrish</span>
-            <span class="text-[10px] tracking-widest uppercase text-gold-600 font-semibold -mt-1">artisanal nuts & seeds</span>
+
+          <!-- Brand Wordmark & Descriptor -->
+          <div class="flex flex-col justify-center">
+            <div class="flex items-center gap-1">
+              <span class="font-serif text-[26px] font-bold tracking-tight text-forest-900 leading-none group-hover:text-forest-700 transition-colors">
+                Nutr<span class="text-gold-500">i</span>sh
+              </span>
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-gold-500 mb-2 animate-pulse"></span>
+            </div>
+            <span class="text-[9.5px] tracking-[0.22em] uppercase text-gold-600 font-extrabold mt-1">
+              Artisanal Harvests
+            </span>
           </div>
         </a>
 
@@ -1268,11 +1305,27 @@
       <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
         
         <div class="md:col-span-2 space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-8 h-8 rounded-xl bg-gold-500 text-forest-900 flex items-center justify-center font-bold">
-              N
+          <!-- Footer Brand Identity Lockup -->
+          <div class="flex items-center gap-3.5 group">
+            <div class="w-12 h-12 rounded-2xl bg-[#14261D] border border-gold-400/30 p-1 flex items-center justify-center shadow-soft-md">
+              <svg class="w-8 h-8 text-gold-400" viewBox="0 0 44 44" fill="none">
+                <circle cx="22" cy="22" r="19" stroke="#D49B55" stroke-width="0.75" stroke-dasharray="2 1.5" opacity="0.6" />
+                <path d="M16 13 C12 11 11 7 13 4 C16 5 17 9 16 13Z" fill="#94B89D" />
+                <path d="M18 12 C18 9 20 6 23 5 C22 8 20 11 18 12Z" fill="#D49B55" opacity="0.9" />
+                <path d="M15 31 L15 15 L19.5 15 L19.5 31 Z" fill="#D49B55" />
+                <path d="M19 16.5 L28 29 L30 29 L20.5 15 Z" fill="#FFFFFF" />
+                <path d="M28 31 L28 16.5 L30.5 15 C31.8 17.2 32 20 31 23 L30.5 31 Z" fill="#D49B55" />
+                <circle cx="22.5" cy="34" r="1.2" fill="#D49B55" />
+              </svg>
             </div>
-            <span class="font-serif text-2xl font-bold tracking-tight text-white">nutrish</span>
+            <div class="flex flex-col">
+              <span class="font-serif text-2xl font-bold tracking-tight text-white flex items-center gap-1">
+                Nutr<span class="text-gold-400">i</span>sh
+              </span>
+              <span class="text-[9.5px] tracking-[0.22em] uppercase text-gold-400 font-extrabold -mt-0.5">
+                Artisanal Harvests
+              </span>
+            </div>
           </div>
           <p class="text-xs sm:text-sm text-sand-100/70 leading-relaxed max-w-sm">
             Curators of single-origin dry fruits, raw superfood seeds, and artisanal blends. Dedicated to uncompromised crunch, cold storage, and chemical-free whole food living in India.
