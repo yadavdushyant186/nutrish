@@ -7,10 +7,10 @@
   <meta name="description" content="Nutrish delivers handpicked single-origin dry fruits (Almonds, Cashews, Walnuts, Pistachios) and raw superfood seeds (Chia, Flax, Pumpkin, Sunflower). Cold-stored, unbleached, and vacuum-sealed for peak crunch.">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
 
-  <!-- Google Fonts: Cinzel (Strong Founder Display), Playfair Display (Serif) & Plus Jakarta Sans (Sans) -->
+  <!-- Google Fonts: Outfit (Clean Price Numerals), Cinzel (Founder Display), Playfair Display (Serif) & Plus Jakarta Sans (Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Outfit:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -62,6 +62,7 @@
             serif: ['"Playfair Display"', 'Georgia', 'serif'],
             sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             cinzel: ['"Cinzel"', 'serif'],
+            price: ['"Outfit"', '"Plus Jakarta Sans"', 'sans-serif'],
           },
           boxShadow: {
             'soft-sm': '0 4px 16px -2px rgba(36, 78, 63, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02)',
@@ -90,6 +91,15 @@
 
     .font-serif {
       font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    /* Clean, Bold, Geometric Numerical Price Font */
+    .product-price, #hero-product-price, #cart-total, #cart-subtotal, .price-display {
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+      font-weight: 800 !important;
+      font-feature-settings: 'tnum' on, 'lnum' on;
+      font-variant-numeric: tabular-nums lining-nums;
+      letter-spacing: -0.02em;
     }
 
     .bg-gradient-glow-warm {
@@ -377,7 +387,7 @@
                 <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
                   <div>
                     <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Current Price</span>
-                    <span id="hero-product-price" class="font-serif text-2xl font-bold text-forest-800">₹499</span>
+                    <span id="hero-product-price" class="product-price font-price text-3xl font-extrabold text-forest-900 tracking-tight">₹499</span>
                   </div>
 
                   <button 
@@ -625,7 +635,7 @@
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
                 <div>
                   <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
-                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹649</p>
+                  <p class="product-price font-price text-2xl font-extrabold text-forest-900 tracking-tight">₹649</p>
                 </div>
                 <button 
                   type="button" 
@@ -703,7 +713,7 @@
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
                 <div>
                   <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
-                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹399</p>
+                  <p class="product-price font-price text-2xl font-extrabold text-forest-900 tracking-tight">₹399</p>
                 </div>
                 <button 
                   type="button" 
@@ -781,7 +791,7 @@
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
                 <div>
                   <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
-                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹449</p>
+                  <p class="product-price font-price text-2xl font-extrabold text-forest-900 tracking-tight">₹449</p>
                 </div>
                 <button 
                   type="button" 
@@ -859,7 +869,7 @@
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
                 <div>
                   <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
-                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹249</p>
+                  <p class="product-price font-price text-2xl font-extrabold text-forest-900 tracking-tight">₹249</p>
                 </div>
                 <button 
                   type="button" 
@@ -937,7 +947,7 @@
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
                 <div>
                   <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
-                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹299</p>
+                  <p class="product-price font-price text-2xl font-extrabold text-forest-900 tracking-tight">₹299</p>
                 </div>
                 <button 
                   type="button" 
@@ -1015,7 +1025,7 @@
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
                 <div>
                   <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Price (INR)</span>
-                  <p class="product-price font-serif text-xl font-bold text-forest-800">₹499</p>
+                  <p class="product-price font-price text-2xl font-extrabold text-forest-900 tracking-tight">₹499</p>
                 </div>
                 <button 
                   type="button" 
@@ -1567,7 +1577,7 @@
       <div class="space-y-1.5 text-sm">
         <div class="flex justify-between text-forest-800/70">
           <span>Subtotal</span>
-          <span id="cart-subtotal" class="font-semibold text-forest-800">₹998</span>
+          <span id="cart-subtotal" class="product-price font-bold text-forest-900">₹998</span>
         </div>
         <div class="flex justify-between text-forest-800/70">
           <span>Cold-Storage Nitrogen Pack</span>
@@ -1575,7 +1585,7 @@
         </div>
         <div class="flex justify-between text-base font-bold text-forest-800 pt-2 border-t border-forest-700/8">
           <span>Estimated Total (INR)</span>
-          <span id="cart-total" class="font-serif text-xl text-forest-800">₹998</span>
+          <span id="cart-total" class="product-price font-price text-2xl font-extrabold text-forest-900 tracking-tight">₹998</span>
         </div>
       </div>
 
@@ -1711,7 +1721,7 @@
           <div class="flex-1 space-y-0.5">
             <h4 class="font-bold text-xs text-forest-800">${item.name}</h4>
             <p class="text-[11px] text-forest-800/60">${item.weight} • ₹${item.price.toLocaleString('en-IN')}</p>
-            <p class="text-xs font-bold text-forest-700">₹${(item.price * item.qty).toLocaleString('en-IN')}</p>
+            <p class="product-price text-xs font-bold text-forest-800">₹${(item.price * item.qty).toLocaleString('en-IN')}</p>
           </div>
 
           <div class="flex items-center gap-1.5 bg-white rounded-full border border-forest-700/10 px-2 py-1 shadow-sm">
