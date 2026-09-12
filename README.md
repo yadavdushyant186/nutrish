@@ -2,6 +2,8 @@
 
 A modern, responsive e-commerce storefront for **Nutrish**, an artisanal direct-to-consumer brand offering single-origin dry fruits and raw superfood seeds in Indian Rupees (INR).
 
+**Founder & Chief Curator**: **Dushyant Yadav**
+
 ---
 
 ## 🌿 Overview
