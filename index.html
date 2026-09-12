@@ -135,13 +135,15 @@
 
   <!-- ==================== TOP ANNOUNCEMENT BANNER (INR) ==================== -->
   <aside aria-label="Announcement" class="bg-forest-800 text-oat-100 text-xs py-2.5 px-4 text-center border-b border-forest-700/40">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 font-medium">
-      <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
-      <span>Complimentary Heritage Brass Spoon on orders above ₹999</span>
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 font-medium flex-wrap">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gold-500 text-forest-900 font-extrabold text-[11px] shadow-sm">
+        🎁 1KG SPECIAL
+      </span>
+      <span class="font-bold text-gold-300">Free Luxury Gift Hamper Box on buying 1kg</span>
       <span class="hidden sm:inline text-forest-500">•</span>
-      <span class="hidden sm:inline text-gold-400">Free Express Shipping across India</span>
-      <span class="hidden sm:inline text-forest-500">•</span>
-      <span class="hidden md:inline">100% Unbleached, Cold-Stored Harvests</span>
+      <span class="hidden sm:inline text-oat-200">Free Express Shipping across India</span>
+      <span class="hidden md:inline text-forest-500">•</span>
+      <span class="hidden md:inline text-forest-300">100% Unbleached, Cold-Stored Harvests</span>
     </div>
   </aside>
 
@@ -214,7 +216,10 @@
           <a href="#shop" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">Superfood Seeds</a>
           <a href="#blends" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">Daily Blends</a>
           <a href="#standards" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">Our Standard</a>
-          <a href="#gifting" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">Gift Boxes</a>
+          <a href="#gifting" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors inline-flex items-center gap-1.5">
+            <span>Gift Hampers</span>
+            <span class="text-[10px] bg-gold-400 text-forest-900 font-extrabold px-1.5 py-0.5 rounded-full leading-none">1kg Offer</span>
+          </a>
           <a href="#faq" class="px-4 py-2 text-sm font-medium text-forest-800 hover:text-forest-600 hover:bg-oat-200/60 rounded-full transition-colors">FAQ</a>
         </nav>
 
@@ -251,7 +256,10 @@
       <a href="#shop" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">Superfood Seeds (Chia, Flax, Pumpkin, Sunflower)</a>
       <a href="#blends" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">Daily Ritual Mixes</a>
       <a href="#standards" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">The Nutrish Quality Standard</a>
-      <a href="#gifting" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">Artisanal Gift Hampers</a>
+      <a href="#gifting" class="flex items-center justify-between py-2 text-base font-medium text-forest-800 hover:text-forest-600">
+        <span>Artisanal Gift Hampers</span>
+        <span class="text-xs bg-gold-400 text-forest-900 font-extrabold px-2.5 py-0.5 rounded-full">Free on 1kg 🎁</span>
+      </a>
       <a href="#faq" class="block py-2 text-base font-medium text-forest-800 hover:text-forest-600">Storage & Freshness FAQ</a>
       <div class="pt-4 border-t border-forest-700/10 flex items-center justify-between">
         <span class="text-xs text-forest-800/70">Support: care@nutrish.in</span>
@@ -378,9 +386,19 @@
                   <button type="button" class="hero-weight-btn py-2 rounded-xl text-xs font-bold border border-forest-700/20 bg-white text-forest-800 hover:bg-oat-100 transition-all text-center" data-weight="500g" data-price="₹949">
                     500g Jar
                   </button>
-                  <button type="button" class="hero-weight-btn py-2 rounded-xl text-xs font-bold border border-forest-700/20 bg-white text-forest-800 hover:bg-oat-100 transition-all text-center" data-weight="1kg" data-price="₹1,799">
-                    1kg Bulk Box
+                  <button type="button" class="hero-weight-btn relative py-1.5 px-2 rounded-xl text-xs font-bold border border-forest-700/20 bg-white text-forest-800 hover:bg-oat-100 transition-all text-center flex flex-col items-center justify-center" data-weight="1kg" data-price="₹1,799">
+                    <span>1kg Bulk</span>
+                    <span class="text-[9px] font-extrabold text-gold-600 leading-none mt-0.5">🎁 +Free Hamper</span>
                   </button>
+                </div>
+
+                <!-- Hero Hamper Offer Callout (dynamic on 1kg) -->
+                <div id="hero-hamper-perk" class="hidden p-2.5 rounded-2xl bg-gold-100/90 border border-gold-400/60 text-xs text-forest-900 flex items-center gap-2.5 transition-all">
+                  <div class="w-6 h-6 rounded-full bg-gold-500 text-forest-900 flex items-center justify-center flex-shrink-0 text-xs font-bold">🎁</div>
+                  <div class="leading-tight text-[11px]">
+                    <span class="text-gold-700 font-extrabold">1kg Gift Hamper Bonus:</span>
+                    <span class="text-forest-800"> Includes complimentary handcrafted wooden gift hamper box & greeting card (Worth ₹450)!</span>
+                  </div>
                 </div>
 
                 <!-- Price in INR and Quick Add to Cart Button -->
@@ -624,12 +642,22 @@
               </div>
             </div>
 
-            <div class="p-6 pt-0 space-y-4">
+            <div class="p-6 pt-0 space-y-3">
               <!-- Weight Variant Tabs in INR -->
               <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
                 <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="649">250g</button>
                 <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="1199">500g</button>
-                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="2299">1kg</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800 flex items-center justify-center gap-1" data-weight="1kg" data-price="2299">
+                  <span>1kg</span>
+                  <span class="text-[9px] bg-gold-400/40 text-gold-700 px-1 rounded font-extrabold">🎁</span>
+                </button>
+              </div>
+
+              <!-- 1kg Gift Hamper Perk Notice -->
+              <div class="card-hamper-alert hidden py-1 px-2.5 rounded-lg bg-gold-100/90 border border-gold-300 text-[11px] text-forest-900 font-medium flex items-center gap-1.5">
+                <span class="text-xs">🎁</span>
+                <span class="font-bold text-gold-700">1kg Gift Box:</span>
+                <span class="text-forest-800 text-[10px]">Free Luxury Hamper Box (₹450 value)</span>
               </div>
 
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
@@ -703,11 +731,21 @@
               </div>
             </div>
 
-            <div class="p-6 pt-0 space-y-4">
+            <div class="p-6 pt-0 space-y-3">
               <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
                 <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="399">250g</button>
                 <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="749">500g</button>
-                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="1449">1kg</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800 flex items-center justify-center gap-1" data-weight="1kg" data-price="1449">
+                  <span>1kg</span>
+                  <span class="text-[9px] bg-gold-400/40 text-gold-700 px-1 rounded font-extrabold">🎁</span>
+                </button>
+              </div>
+
+              <!-- 1kg Gift Hamper Perk Notice -->
+              <div class="card-hamper-alert hidden py-1 px-2.5 rounded-lg bg-gold-100/90 border border-gold-300 text-[11px] text-forest-900 font-medium flex items-center gap-1.5">
+                <span class="text-xs">🎁</span>
+                <span class="font-bold text-gold-700">1kg Gift Box:</span>
+                <span class="text-forest-800 text-[10px]">Free Luxury Hamper Box (₹450 value)</span>
               </div>
 
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
@@ -781,11 +819,21 @@
               </div>
             </div>
 
-            <div class="p-6 pt-0 space-y-4">
+            <div class="p-6 pt-0 space-y-3">
               <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
                 <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="449">250g</button>
                 <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="849">500g</button>
-                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="1599">1kg</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800 flex items-center justify-center gap-1" data-weight="1kg" data-price="1599">
+                  <span>1kg</span>
+                  <span class="text-[9px] bg-gold-400/40 text-gold-700 px-1 rounded font-extrabold">🎁</span>
+                </button>
+              </div>
+
+              <!-- 1kg Gift Hamper Perk Notice -->
+              <div class="card-hamper-alert hidden py-1 px-2.5 rounded-lg bg-gold-100/90 border border-gold-300 text-[11px] text-forest-900 font-medium flex items-center gap-1.5">
+                <span class="text-xs">🎁</span>
+                <span class="font-bold text-gold-700">1kg Gift Box:</span>
+                <span class="text-forest-800 text-[10px]">Free Luxury Hamper Box (₹450 value)</span>
               </div>
 
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
@@ -859,11 +907,21 @@
               </div>
             </div>
 
-            <div class="p-6 pt-0 space-y-4">
+            <div class="p-6 pt-0 space-y-3">
               <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
                 <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="249">250g</button>
                 <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="449">500g</button>
-                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="799">1kg</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800 flex items-center justify-center gap-1" data-weight="1kg" data-price="799">
+                  <span>1kg</span>
+                  <span class="text-[9px] bg-gold-400/40 text-gold-700 px-1 rounded font-extrabold">🎁</span>
+                </button>
+              </div>
+
+              <!-- 1kg Gift Hamper Perk Notice -->
+              <div class="card-hamper-alert hidden py-1 px-2.5 rounded-lg bg-gold-100/90 border border-gold-300 text-[11px] text-forest-900 font-medium flex items-center gap-1.5">
+                <span class="text-xs">🎁</span>
+                <span class="font-bold text-gold-700">1kg Gift Box:</span>
+                <span class="text-forest-800 text-[10px]">Free Luxury Hamper Box (₹450 value)</span>
               </div>
 
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
@@ -937,11 +995,21 @@
               </div>
             </div>
 
-            <div class="p-6 pt-0 space-y-4">
+            <div class="p-6 pt-0 space-y-3">
               <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
                 <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="299">250g</button>
                 <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="549">500g</button>
-                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="999">1kg</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800 flex items-center justify-center gap-1" data-weight="1kg" data-price="999">
+                  <span>1kg</span>
+                  <span class="text-[9px] bg-gold-400/40 text-gold-700 px-1 rounded font-extrabold">🎁</span>
+                </button>
+              </div>
+
+              <!-- 1kg Gift Hamper Perk Notice -->
+              <div class="card-hamper-alert hidden py-1 px-2.5 rounded-lg bg-gold-100/90 border border-gold-300 text-[11px] text-forest-900 font-medium flex items-center gap-1.5">
+                <span class="text-xs">🎁</span>
+                <span class="font-bold text-gold-700">1kg Gift Box:</span>
+                <span class="text-forest-800 text-[10px]">Free Luxury Hamper Box (₹450 value)</span>
               </div>
 
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
@@ -1015,11 +1083,21 @@
               </div>
             </div>
 
-            <div class="p-6 pt-0 space-y-4">
+            <div class="p-6 pt-0 space-y-3">
               <div class="weight-switcher grid grid-cols-3 gap-1.5 p-1 bg-oat-100 rounded-xl">
                 <button type="button" class="weight-opt active py-1.5 rounded-lg text-xs font-bold bg-white text-forest-800 shadow-sm" data-weight="250g" data-price="499">250g</button>
                 <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="500g" data-price="899">500g</button>
-                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800" data-weight="1kg" data-price="1699">1kg</button>
+                <button type="button" class="weight-opt py-1.5 rounded-lg text-xs font-bold text-forest-800/70 hover:text-forest-800 flex items-center justify-center gap-1" data-weight="1kg" data-price="1699">
+                  <span>1kg</span>
+                  <span class="text-[9px] bg-gold-400/40 text-gold-700 px-1 rounded font-extrabold">🎁</span>
+                </button>
+              </div>
+
+              <!-- 1kg Gift Hamper Perk Notice -->
+              <div class="card-hamper-alert hidden py-1 px-2.5 rounded-lg bg-gold-100/90 border border-gold-300 text-[11px] text-forest-900 font-medium flex items-center gap-1.5">
+                <span class="text-xs">🎁</span>
+                <span class="font-bold text-gold-700">1kg Gift Box:</span>
+                <span class="text-forest-800 text-[10px]">Free Luxury Hamper Box (₹450 value)</span>
               </div>
 
               <div class="flex items-center justify-between pt-2 border-t border-forest-700/6">
@@ -1230,51 +1308,291 @@
       </div>
     </section>
 
-    <!-- ==================== 7. ARTISANAL GIFTING BOXES (INR) ==================== -->
-    <section id="gifting" class="py-20 md:py-28 bg-white relative">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- ==================== 7. ARTISANAL GIFT HAMPERS & 1KG PROMOTION (INR) ==================== -->
+    <section id="gifting" class="py-20 md:py-28 bg-[#FAF7F2] relative overflow-hidden">
+      <!-- Background Ambient Glow -->
+      <div class="absolute -top-24 right-0 w-96 h-96 bg-gold-200/40 rounded-full filter blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 left-0 w-96 h-96 bg-sage-200/30 rounded-full filter blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div class="bg-gradient-to-br from-forest-800 via-forest-700 to-forest-900 rounded-5xl p-8 sm:p-14 text-white shadow-soft-lg grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-4 mb-14">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-100 text-gold-700 text-xs font-bold uppercase tracking-wider border border-gold-300 shadow-soft-sm">
+            <i data-lucide="gift" class="w-3.5 h-3.5 text-gold-600"></i>
+            <span>Festive, Wedding & Executive Gifting</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-forest-800 font-bold tracking-tight">
+            Artisanal Gift Hampers
+          </h2>
+          <p class="text-base sm:text-lg text-forest-800/75 leading-relaxed">
+            Elegance crafted for true connoisseurs. Handcrafted reclaimed pine wood boxes, velvet cushion beds, and embossed airtight glass jars.
+          </p>
+        </div>
+
+        <!-- High-Impact 1kg Milestone Promotion Banner -->
+        <div class="mb-16 bg-gradient-to-r from-forest-900 via-forest-800 to-forest-900 rounded-4xl p-6 sm:p-10 text-white shadow-soft-lg border border-forest-700/60 relative overflow-hidden">
+          <div class="absolute -right-16 -top-16 w-60 h-60 bg-gold-400/20 rounded-full filter blur-2xl pointer-events-none"></div>
           
-          <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-gold-400/15 filter blur-3xl pointer-events-none"></div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <div class="lg:col-span-8 space-y-3">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500 text-forest-950 text-xs font-black tracking-wide uppercase shadow-sm">
+                <span>✦ Limited Storefront Promotion</span>
+              </div>
+              <h3 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-oat-50 leading-tight">
+                Buy ANY 1kg Harvest &amp; Get a <span class="text-gold-400 italic font-serif">Complimentary Luxury Gift Hamper Box</span>
+              </h3>
+              <p class="text-sand-100/80 text-xs sm:text-sm leading-relaxed max-w-2xl">
+                Every single 1kg order automatically arrives nestled in our signature gold-embossed wooden gift box with a custom personalized gift note and wooden serving scoop — worth ₹450, completely free of charge!
+              </p>
+            </div>
 
-          <div class="lg:col-span-7 space-y-6">
-            <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-gold-300 text-xs font-bold backdrop-blur-sm border border-white/10">
-              <i data-lucide="gift" class="w-3.5 h-3.5 text-gold-400"></i>
-              <span>Festive & Corporate Gifting</span>
-            </span>
-
-            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-              The Emperor’s Nut & Seed Chest
-            </h2>
-
-            <p class="text-sand-100/80 text-sm sm:text-base leading-relaxed font-normal">
-              Presented in a handcrafted reclaimed pine wood box with brass clasps. Features four signature 350g embossed glass jars: Mamra Almonds, W240 Cashews, Kashmiri Walnuts, and Iranian Salted Pistachios, paired with raw mountain honey and a wooden serving spoon.
-            </p>
-
-            <div class="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <a href="#shop" class="btn-tactile inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-forest-900 font-bold text-sm px-7 py-3.5 rounded-full shadow-glow-gold transition-all">
-                <span>Order Gift Box — ₹2,499</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-center lg:items-end justify-center gap-3">
+              <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/15 text-center w-full sm:w-auto lg:w-full">
+                <p class="text-xs text-gold-300 uppercase font-bold tracking-wider">Hamper Box Value</p>
+                <div class="flex items-center justify-center gap-2 mt-0.5">
+                  <span class="text-sand-100/50 line-through text-sm font-semibold">₹450</span>
+                  <span class="text-2xl font-black text-white font-price">₹0 (FREE)</span>
+                </div>
+                <p class="text-[11px] text-oat-200/80 mt-1">Applied automatically in Jar on 1kg</p>
+              </div>
+              <a href="#shop" class="btn-tactile w-full sm:w-auto lg:w-full text-center py-3.5 px-6 rounded-full bg-gold-500 hover:bg-gold-600 text-forest-900 font-bold text-xs uppercase tracking-wider shadow-glow-gold transition-all">
+                Shop 1kg Harvests →
               </a>
-              <span class="text-xs text-sand-100/60 font-medium">Custom branding available on bulk corporate orders</span>
             </div>
           </div>
+        </div>
 
-          <div class="lg:col-span-5 flex justify-center">
-            <div class="w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl border border-white/20 group relative">
-              <img 
-                src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=600&q=80" 
-                alt="Emperor's Gift Chest" 
-                class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-              >
-              <div class="absolute inset-0 bg-gradient-to-t from-forest-900/90 via-transparent to-transparent flex flex-col justify-end p-5 text-white">
-                <h4 class="font-serif text-lg font-bold">Handcrafted Pine Wood Chest</h4>
-                <p class="text-xs text-gold-300">✦ Reusable Embossed Glass Jars with Brass Lid</p>
+        <!-- 3 Curated 1kg Luxury Gift Hampers Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+          <!-- Hamper 1: The Royal Imperial 4-Jar Hamper (1kg) -->
+          <div class="hamper-card bg-white rounded-3xl overflow-hidden border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="h-64 relative overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=600&q=80" 
+                  alt="The Royal Imperial 4-Jar Hamper (1kg)" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <div class="absolute top-4 left-4 flex flex-col gap-1.5">
+                  <span class="px-3 py-1 rounded-full bg-forest-900/90 text-gold-300 text-xs font-bold backdrop-blur-sm shadow-sm">
+                    ★ Bestseller • 1kg Net
+                  </span>
+                </div>
+                <span class="absolute top-4 right-4 text-xs font-bold text-forest-800 flex items-center gap-1 bg-white/95 px-2.5 py-0.5 rounded-full shadow-sm">
+                  ★ 4.99 (820+ sold)
+                </span>
+                <div class="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-transparent to-transparent flex items-end p-4">
+                  <span class="text-xs text-white font-medium">✦ Handcrafted Reclaimed Pine Chest</span>
+                </div>
+              </div>
+
+              <div class="p-6 space-y-4">
+                <div class="flex items-center justify-between text-xs text-gold-600 font-bold uppercase tracking-wider">
+                  <span>Grand Heritage Edition</span>
+                  <span class="text-forest-700/60 font-semibold">1,000g Total</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-forest-800">The Royal Imperial 4-Jar Hamper</h3>
+                <p class="text-xs text-forest-800/70 leading-relaxed">
+                  Four signature 250g embossed airtight glass jars resting on lush velvet: Iranian Mamra Almonds, Royal W240 Cashews, Kashmiri Snow Walnuts, and Roasted Akbari Pistachios. Includes wild forest honey & pure brass spoon.
+                </p>
+
+                <!-- Hamper Breakdown -->
+                <div class="p-3 bg-oat-100/70 rounded-2xl border border-forest-700/8 space-y-1 text-xs">
+                  <span class="text-[10px] uppercase font-bold text-gold-600 tracking-wider">Hamper Contents (1kg Net):</span>
+                  <div class="grid grid-cols-2 gap-1 text-[11px] text-forest-800/80 pt-1">
+                    <span>• 250g Mamra Almonds</span>
+                    <span>• 250g W240 Cashews</span>
+                    <span>• 250g Kashmiri Walnuts</span>
+                    <span>• 250g Roasted Pistachios</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 space-y-3">
+              <div class="flex items-center justify-between pt-3 border-t border-forest-700/6">
+                <div>
+                  <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Hamper Price</span>
+                  <div class="flex items-baseline gap-2">
+                    <p class="product-price font-price text-2xl font-extrabold text-forest-900 tracking-tight">₹2,799</p>
+                    <span class="text-xs text-forest-800/50 line-through">₹3,299</span>
+                  </div>
+                </div>
+                <button 
+                  type="button" 
+                  class="hamper-add-btn btn-tactile inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-forest-950 text-xs font-bold px-5 py-3 rounded-full shadow-soft-sm transition-all"
+                  data-id="hamper-royal"
+                  data-name="The Royal Imperial 4-Jar Hamper (1kg)"
+                  data-price="2799"
+                  data-weight="1kg"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Add Hamper</span>
+                </button>
               </div>
             </div>
           </div>
 
+          <!-- Hamper 2: The Kashmiri & Mamra Heritage Duo (1kg) -->
+          <div class="hamper-card bg-white rounded-3xl overflow-hidden border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="h-64 relative overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1549488344-cbb6c34cf08b?auto=format&fit=crop&w=600&q=80" 
+                  alt="The Kashmiri & Mamra Heritage Duo (1kg)" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <div class="absolute top-4 left-4 flex flex-col gap-1.5">
+                  <span class="px-3 py-1 rounded-full bg-forest-900/90 text-gold-300 text-xs font-bold backdrop-blur-sm shadow-sm">
+                    Luxury Duo • 1kg Net
+                  </span>
+                </div>
+                <span class="absolute top-4 right-4 text-xs font-bold text-forest-800 flex items-center gap-1 bg-white/95 px-2.5 py-0.5 rounded-full shadow-sm">
+                  ★ 4.97 (430+ sold)
+                </span>
+                <div class="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-transparent to-transparent flex items-end p-4">
+                  <span class="text-xs text-white font-medium">✦ Forest Green Gold-Foil Gift Box</span>
+                </div>
+              </div>
+
+              <div class="p-6 space-y-4">
+                <div class="flex items-center justify-between text-xs text-gold-600 font-bold uppercase tracking-wider">
+                  <span>Connoisseur Reserve</span>
+                  <span class="text-forest-700/60 font-semibold">1,000g Total</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-forest-800">The Kashmiri &amp; Mamra Duo</h3>
+                <p class="text-xs text-forest-800/70 leading-relaxed">
+                  Two giant 500g vacuum-sealed keepsake jars featuring our crowning jewels: fresh light-amber Kashmiri Snow Walnut halves and oil-rich Iranian Mamra Almonds with golden satin ribbon and brass wax-seal gift tag.
+                </p>
+
+                <!-- Hamper Breakdown -->
+                <div class="p-3 bg-oat-100/70 rounded-2xl border border-forest-700/8 space-y-1 text-xs">
+                  <span class="text-[10px] uppercase font-bold text-gold-600 tracking-wider">Hamper Contents (1kg Net):</span>
+                  <div class="grid grid-cols-2 gap-1 text-[11px] text-forest-800/80 pt-1">
+                    <span>• 500g Kashmiri Walnuts</span>
+                    <span>• 500g Mamra Almonds</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 space-y-3">
+              <div class="flex items-center justify-between pt-3 border-t border-forest-700/6">
+                <div>
+                  <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Hamper Price</span>
+                  <div class="flex items-baseline gap-2">
+                    <p class="product-price font-price text-2xl font-extrabold text-forest-900 tracking-tight">₹2,499</p>
+                    <span class="text-xs text-forest-800/50 line-through">₹2,999</span>
+                  </div>
+                </div>
+                <button 
+                  type="button" 
+                  class="hamper-add-btn btn-tactile inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-forest-950 text-xs font-bold px-5 py-3 rounded-full shadow-soft-sm transition-all"
+                  data-id="hamper-heritage"
+                  data-name="The Kashmiri & Mamra Heritage Duo (1kg)"
+                  data-price="2499"
+                  data-weight="1kg"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Add Hamper</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hamper 3: The Superfood Vitality Wellness Hamper (1kg) -->
+          <div class="hamper-card bg-white rounded-3xl overflow-hidden border border-forest-700/8 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="h-64 relative overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?auto=format&fit=crop&w=600&q=80" 
+                  alt="The Superfood Vitality Wellness Hamper (1kg)" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                >
+                <div class="absolute top-4 left-4 flex flex-col gap-1.5">
+                  <span class="px-3 py-1 rounded-full bg-forest-900/90 text-gold-300 text-xs font-bold backdrop-blur-sm shadow-sm">
+                    Wellness Hamper • 1kg Net
+                  </span>
+                </div>
+                <span class="absolute top-4 right-4 text-xs font-bold text-forest-800 flex items-center gap-1 bg-white/95 px-2.5 py-0.5 rounded-full shadow-sm">
+                  ★ 4.95 (310+ sold)
+                </span>
+                <div class="absolute inset-0 bg-gradient-to-t from-forest-950/80 via-transparent to-transparent flex items-end p-4">
+                  <span class="text-xs text-white font-medium">✦ Eco-Luxe Reusable Wooden Caddy</span>
+                </div>
+              </div>
+
+              <div class="p-6 space-y-4">
+                <div class="flex items-center justify-between text-xs text-gold-600 font-bold uppercase tracking-wider">
+                  <span>Holistic Vitality</span>
+                  <span class="text-forest-700/60 font-semibold">1,000g Total</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-forest-800">The Superfood Vitality Hamper</h3>
+                <p class="text-xs text-forest-800/70 leading-relaxed">
+                  Four 250g reusable matte canisters with handcrafted beechwood measuring scoop: Peruvian Chia Seeds, Austrian Heirloom Pepitas, The Morning Radiance Blend, and Roasted Flaxseeds. Includes holistic recipe card.
+                </p>
+
+                <!-- Hamper Breakdown -->
+                <div class="p-3 bg-oat-100/70 rounded-2xl border border-forest-700/8 space-y-1 text-xs">
+                  <span class="text-[10px] uppercase font-bold text-gold-600 tracking-wider">Hamper Contents (1kg Net):</span>
+                  <div class="grid grid-cols-2 gap-1 text-[11px] text-forest-800/80 pt-1">
+                    <span>• 250g Peruvian Chia</span>
+                    <span>• 250g Styrian Pepitas</span>
+                    <span>• 250g Radiance Blend</span>
+                    <span>• 250g Roasted Flaxseed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 pt-0 space-y-3">
+              <div class="flex items-center justify-between pt-3 border-t border-forest-700/6">
+                <div>
+                  <span class="text-[10px] text-forest-800/60 uppercase font-bold tracking-wider">Hamper Price</span>
+                  <div class="flex items-baseline gap-2">
+                    <p class="product-price font-price text-2xl font-extrabold text-forest-900 tracking-tight">₹1,899</p>
+                    <span class="text-xs text-forest-800/50 line-through">₹2,299</span>
+                  </div>
+                </div>
+                <button 
+                  type="button" 
+                  class="hamper-add-btn btn-tactile inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-forest-950 text-xs font-bold px-5 py-3 rounded-full shadow-soft-sm transition-all"
+                  data-id="hamper-superfood"
+                  data-name="The Superfood Vitality Hamper (1kg)"
+                  data-price="1899"
+                  data-weight="1kg"
+                >
+                  <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+                  <span>Add Hamper</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Corporate & Custom Concierge Gifting Card -->
+        <div class="bg-white rounded-3xl p-8 sm:p-10 border border-forest-700/10 shadow-soft-sm flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="space-y-2 text-center md:text-left">
+            <div class="inline-flex items-center gap-2 text-xs font-bold text-gold-600 uppercase tracking-wider">
+              <i data-lucide="building-2" class="w-4 h-4"></i>
+              <span>Corporate &amp; Wedding Concierge</span>
+            </div>
+            <h4 class="font-serif text-2xl font-bold text-forest-900">Custom Logo Engraving &amp; Multi-Address Dispatch</h4>
+            <p class="text-xs sm:text-sm text-forest-800/70 max-w-xl">
+              Sending 25+ gift hampers to team members, clients, or wedding guests? We offer laser logo engraving, custom ribbon shades, and Pan-India doorstep delivery.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+            <a href="mailto:gifting@nutrish.in?subject=Corporate%20Gifting%20Enquiry%20-%20Nutrish" class="btn-tactile w-full sm:w-auto text-center px-6 py-3.5 rounded-full bg-forest-800 hover:bg-forest-900 text-white font-bold text-xs shadow-soft-sm transition-all">
+              Enquire Corporate Rates
+            </a>
+            <a href="#shop" class="btn-tactile w-full sm:w-auto text-center px-6 py-3.5 rounded-full bg-oat-200 hover:bg-oat-300 text-forest-800 font-bold text-xs transition-all">
+              Explore Storefront
+            </a>
+          </div>
         </div>
 
       </div>
@@ -1567,6 +1885,11 @@
       <span class="font-bold text-forest-700">₹999 Free Limit</span>
     </div>
 
+    <!-- 1kg Gift Hamper Reward Bar -->
+    <div id="cart-hamper-reward-banner" class="px-6 py-2.5 bg-gold-100 border-b border-gold-300 text-xs text-forest-900 transition-all">
+      <!-- Injected via JavaScript -->
+    </div>
+
     <!-- Scrollable Items List -->
     <div id="cart-items-list" class="flex-1 overflow-y-auto p-6 space-y-4">
       <!-- Injected via JavaScript -->
@@ -1582,6 +1905,13 @@
         <div class="flex justify-between text-forest-800/70">
           <span>Cold-Storage Nitrogen Pack</span>
           <span class="text-sage-600 font-semibold">Complimentary</span>
+        </div>
+        <div class="flex justify-between text-forest-800/70 text-xs items-center">
+          <span class="flex items-center gap-1.5">
+            <span>🎁</span>
+            <span>1kg Luxury Gift Hamper Box</span>
+          </span>
+          <span id="cart-hamper-value" class="text-gold-600 font-bold">Free on 1kg</span>
         </div>
         <div class="flex justify-between text-base font-bold text-forest-800 pt-2 border-t border-forest-700/8">
           <span>Estimated Total (INR)</span>
@@ -1704,6 +2034,38 @@
         freeShippingText.textContent = `Add ₹${diff.toLocaleString('en-IN')} more for Free Express Delivery!`;
       }
 
+      // 1kg Gift Hamper Perk Verification
+      const has1kg = cart.some(item => item.weight === '1kg' || (item.name && item.name.toLowerCase().includes('hamper')));
+      const rewardBanner = document.getElementById('cart-hamper-reward-banner');
+      const hamperValEl = document.getElementById('cart-hamper-value');
+
+      if (rewardBanner) {
+        if (has1kg) {
+          rewardBanner.className = "px-6 py-2.5 bg-gold-100 border-b border-gold-300 text-xs text-forest-900 flex items-center justify-between";
+          rewardBanner.innerHTML = `
+            <div class="flex items-center gap-2">
+              <span class="text-base">🎁</span>
+              <div>
+                <p class="font-extrabold text-forest-950 text-xs">1kg Hamper Reward Unlocked!</p>
+                <p class="text-[10.5px] text-forest-800/80">Handcrafted wooden box & card (₹450 value) added free.</p>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 rounded-full bg-forest-800 text-gold-300 text-[10px] font-black tracking-wider uppercase">FREE</span>
+          `;
+          if (hamperValEl) hamperValEl.innerHTML = `<span class="text-forest-700 font-bold">✓ FREE (₹450 Value)</span>`;
+        } else {
+          rewardBanner.className = "px-6 py-2 bg-oat-100 border-b border-forest-700/8 text-xs text-forest-800 flex items-center justify-between";
+          rewardBanner.innerHTML = `
+            <div class="flex items-center gap-2">
+              <span class="text-sm">🎁</span>
+              <p class="text-[11px] text-forest-800/80"><strong class="text-forest-900">Buy 1kg:</strong> Unlock a Free Handcrafted Gift Hamper Box!</p>
+            </div>
+            <a href="#gifting" onclick="closeCart()" class="text-[10px] font-bold text-gold-600 hover:underline">View Hampers →</a>
+          `;
+          if (hamperValEl) hamperValEl.innerHTML = `<span class="text-forest-800/50">Unlocked on 1kg</span>`;
+        }
+      }
+
       if (cart.length === 0) {
         list.innerHTML = `
           <div class="py-12 text-center text-forest-800/60 space-y-3">
@@ -1777,6 +2139,7 @@
     const heroWeightBtns = document.querySelectorAll('#hero-weight-selector .hero-weight-btn');
     const heroPriceEl = document.getElementById('hero-product-price');
     const heroAddBtn = document.getElementById('hero-add-to-cart');
+    const heroHamperPerk = document.getElementById('hero-hamper-perk');
 
     heroWeightBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1793,6 +2156,14 @@
 
         heroAddBtn.setAttribute('data-price', price.replace('₹', '').replace(',', ''));
         heroAddBtn.setAttribute('data-weight', weight);
+
+        if (heroHamperPerk) {
+          if (weight === '1kg') {
+            heroHamperPerk.classList.remove('hidden');
+          } else {
+            heroHamperPerk.classList.add('hidden');
+          }
+        }
       });
     });
 
@@ -1821,6 +2192,7 @@
       const weightBtns = card.querySelectorAll('.weight-opt');
       const priceEl = card.querySelector('.product-price');
       const addBtn = card.querySelector('.add-to-cart-btn');
+      const hamperAlert = card.querySelector('.card-hamper-alert');
 
       weightBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1837,6 +2209,14 @@
           priceEl.textContent = `₹${price.toLocaleString('en-IN')}`;
           addBtn.setAttribute('data-price', price);
           addBtn.setAttribute('data-weight', weight);
+
+          if (hamperAlert) {
+            if (weight === '1kg') {
+              hamperAlert.classList.remove('hidden');
+            } else {
+              hamperAlert.classList.add('hidden');
+            }
+          }
         });
       });
 
@@ -1855,6 +2235,27 @@
 
         renderCart();
         showToast("Added to your Jar!", `${name} (${weight})`);
+        openCart();
+      });
+    });
+
+    // 4b. Hamper Add-to-Cart Buttons
+    document.querySelectorAll('.hamper-add-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-id');
+        const name = btn.getAttribute('data-name');
+        const weight = btn.getAttribute('data-weight') || '1kg';
+        const price = parseInt(btn.getAttribute('data-price'));
+
+        const existing = cart.find(i => i.name === name && i.weight === weight);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({ id, name, weight, price, qty: 1 });
+        }
+
+        renderCart();
+        showToast("Hamper added to your Jar!", `${name} (${weight})`);
         openCart();
       });
     });
